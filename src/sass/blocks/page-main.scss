@@ -1,0 +1,25 @@
+.page-main {
+	padding-top: 6px;
+}
+
+.page-main__content {
+	background: #ffffff;
+	position: relative;
+	padding: 0 0 30px;
+	min-height: 370px;
+	clear: both;
+	z-index: 1;
+}
+
+.page-main__wrapper {
+	position: relative;
+	z-index: 1200;
+	width: 900px;
+	margin: 0 auto;
+}
+
+.page-main__container {
+	background: #fff;
+	padding: 22px 22px;
+	min-height: 100px;
+} //.plain_content_wrapper
