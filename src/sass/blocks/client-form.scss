@@ -1,0 +1,102 @@
+.client-form {
+	background: #e8f4e4;
+	color: #000;
+	padding: 25px 21px;
+	padding-bottom: 13px;
+	margin-left: -4px;
+	margin-top: 35px;
+	font-size: 12px;
+	font-family: 'SkodaPro', sans-serif;
+
+	input {
+		display: block;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	input[type='text'],
+	input[type='tel'] {
+		height: auto;
+		padding: 3px 7px 4px;
+		margin-top: 3px;
+	}
+
+	select {
+		width: 100%;
+		height: 25px;
+		margin-top: 3px;
+	}
+
+	label {
+		display: block;
+	}
+
+	.client-form__select {
+		width: 200px;
+		display: inline-block;
+	}
+
+	p {
+		line-height: 15px;
+		margin-bottom: 10px;
+	}
+
+}
+
+.client-form__title {
+	font-size: 17px;
+	margin-bottom: 16px;
+}
+
+.client-form__row {
+	margin-bottom: 10px;
+}
+
+.client-form__star {
+	font-size: 13px;
+	color: #f51a23;
+	margin-left: 4px;
+	margin-right: 3px;
+}
+
+.client-form__required {
+	display: block;
+	position: relative;
+
+	&::after {
+		content: '*';
+		position: absolute;
+		right: 0;
+		top: 3px;
+		font-size: 15px;
+	}
+
+}
+
+.client-form__agree {
+	display: inline;
+	position: relative;
+	cursor: pointer;
+
+	input {
+		width: inherit;
+		display: inline;
+		margin-right: 3px;
+		vertical-align: middle;
+	}
+
+	a {
+	color: #4ba82e;
+	cursor: pointer;
+	text-decoration: none;
+	outline: none !important;
+	}
+
+	a:hover {
+	color: #4ba82e;
+	text-decoration: underline;
+	}
+
+}

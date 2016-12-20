@@ -1,0 +1,194 @@
+@import 'normalize.scss';
+@import 'variables.scss';
+@import 'mixin.scss';
+@import 'blocks/fancybox.scss';
+@import 'blocks/map-popup.scss';
+@import 'blocks/btn.scss';
+@import 'blocks/auto-box.scss';
+@import 'blocks/calc.scss';
+@import 'blocks/calculation.scss';
+@import 'blocks/client-form.scss';
+@import 'blocks/damage.scss';
+@import 'blocks/nouislider.scss';
+@import 'blocks/page-main.scss';
+@import 'blocks/svg.scss';
+@import 'blocks/form.scss';
+@import 'blocks/models.scss';
+
+//fonts
+
+@font-face {
+	@include font-setup($font-fam, $font-1-local, $font-1-url1, $font-1-url2);
+  font-weight: 400;
+}
+@font-face {
+	@include font-setup($font-fam, $font-2-local, $font-2-url1, $font-2-url2);
+  font-weight: 300;
+}
+@font-face {
+	@include font-setup($font-fam, $font-3-local, $font-3-url1, $font-3-url2);
+  font-weight: 500;
+}
+@font-face {
+	@include font-setup($font-fam, $font-4-local, $font-4-url1, $font-4-url2);
+  font-weight: 700;
+}
+@font-face {
+	@include font-setup($font-fam, $font-5-local, $font-5-url1, $font-5-url2);
+  font-weight: 800;
+}
+
+
+// global styles
+
+html {
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: 'SkodaPro', 'Arial', sans-serif;
+	color: #000000;
+	font-weight: 400;
+	background-color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.16;
+	margin: 0 0 10px;
+}
+
+h2 {
+	font-size: 19px;
+	font-weight: 400;
+	color: #000;
+	margin: 0 0 13px;
+}
+
+input,
+select {
+	outline: none;
+}
+
+
+// slider
+
+.nouislider {
+	margin-bottom: 23px;
+	margin-top: 28px;
+}
+
+.noUi-handle {
+	box-shadow: none;
+	border: none;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+	display: none !important;
+}
+
+.noUi-target {
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+}
+
+// kdx menu
+
+.kdx-nav {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: rgba(53, 18, 95, .85);
+  z-index: 1000;
+  max-height: 100%;
+  overflow-y: auto;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #fff;
+  text-align: left;
+  text-shadow: 0 0 5px rgba(255, 255, 255, .3);
+  &__trigger {
+    position: relative;
+    padding: 5px 30px 5px 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      right: 10px;
+      top: 50%;
+      margin-top: -2px;
+      border: 5px solid transparent;
+      border-width: 0 5px 5px;
+      border-color: #fff transparent;
+      transition: all .4s;
+    }
+  }
+  &--opened &__trigger {
+    &:before {
+      transform: rotate(180deg);
+    }
+  }
+  &__body {
+    display: none;
+    border-top: 1px solid rgba(0, 0, 0, .7);
+    padding-bottom: 5px;
+  }
+  a {
+    display: block;
+    color: #fff !important;
+    text-decoration: none;
+    transition: all .2s;
+    padding: 4px 30px 4px 20px;
+    line-height: 1.2;
+    white-space: nowrap;
+    &:hover {
+      background: rgba(255,255,255,.2);
+    }
+    &.disabled,
+    &.disabled:hover {
+      opacity: 0.3;
+      cursor: default;
+      text-decoration: none;
+      background: none;
+    }
+  }
+  hr {
+    margin: 5px 0;
+    height: 0;
+    border: none;
+  }
+  h4 {
+    font-size: 13px;
+    margin: 5px 0 0;
+    font-weight: normal;
+    padding: 5px 12px;
+    text-transform: uppercase;
+  }
+  hr, h4 {
+    border-top: 1px solid rgba(0, 0, 0, .7);
+  }
+  h4, &__trigger {
+    background: rgba(0,0,0,.42);
+  }
+}
+
+.hideme {
+	display: none !important;
+}
