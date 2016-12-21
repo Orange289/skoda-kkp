@@ -1,9 +1,8 @@
 .client-form {
 	background: #e8f4e4;
 	color: #000;
-	padding: 25px 21px;
+	padding: 25px 20px;
 	padding-bottom: 13px;
-	margin-left: -4px;
 	margin-top: 35px;
 	font-size: 12px;
 	font-family: 'SkodaPro', sans-serif;
@@ -19,8 +18,8 @@
 	input[type='text'],
 	input[type='tel'] {
 		height: auto;
-		padding: 3px 7px 4px;
-		margin-top: 3px;
+		padding: 4px 7px 4px;
+		margin-top: 4px;
 	}
 
 	select {
@@ -51,7 +50,7 @@
 }
 
 .client-form__row {
-	margin-bottom: 10px;
+	margin-bottom: 9px;
 }
 
 .client-form__star {
@@ -76,14 +75,15 @@
 }
 
 .client-form__agree {
-	display: inline;
+	display: inline-block;
 	position: relative;
 	cursor: pointer;
+	margin-top: -2px;
 
 	input {
 		width: inherit;
 		display: inline;
-		margin-right: 3px;
+		// margin-right: 3px;
 		vertical-align: middle;
 	}
 

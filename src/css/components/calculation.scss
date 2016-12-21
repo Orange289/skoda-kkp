@@ -13,7 +13,7 @@
 }
 
 .calculation__article {
-	padding-top: 20px;
+	padding-top: 17px;
 
 	&--total {
 		padding-top: 40px;
@@ -28,8 +28,13 @@
 		}
 
 		.calculation__item {
-			padding-top: 19px;
+			padding-top: 24px;
 			padding-bottom: 16px;
+		}
+
+		.calculation__item--total-hover {
+			cursor: pointer;
+			padding-top: 16px;
 		}
 
 		.calculation__item:last-of-type {
@@ -50,7 +55,7 @@
 	position: relative;
 	z-index: 2;
 	padding-top: 23px;
-	padding-bottom: 19px;
+	padding-bottom: 16px;
 	padding-left: 35px;
 	border-bottom: 1px solid #dcdcdc;
 	cursor: pointer;
@@ -59,7 +64,7 @@
 		content: '';
 		position: absolute;
 		left: 0;
-		top: 30px;
+		top: 33px;
 		width: 20px;
 		height: 12px;
 		margin-top: -6px;
@@ -78,7 +83,7 @@
 	z-index: 1;
 
 	&--labors {
-		padding-bottom: 28px;
+		padding-bottom: 26px;
 		border-bottom: 1px solid #dcdcdc;
 	}
 
@@ -98,7 +103,7 @@
 }
 
 .calculation__point {
-	padding-top: 16px;
+	padding-top: 18px;
 }
 
 .calculation__option {
@@ -152,14 +157,14 @@
 
 	label {
 		position: relative;
-		padding-left: 30px;
+		padding-left: 28px;
 		padding-right: 100px;
 	}
 
 	label::before {
 		content: '';
 		position: absolute;
-		top: -2px;
+		top: -4px;
 		left: -2px;
 		@include size(16px);
 		border: 1px solid #dcdcdc;
@@ -176,7 +181,7 @@
 
 .form__radio:checked ~ span {
 	position: absolute;
-	top: 4px;
+	top: 2px;
 	left: 4px;
 	@include size(6px);
 	background-color: #4ba82e;
@@ -187,10 +192,6 @@
 	padding-top: 22px;
 	padding-bottom: 26px;
 	padding-left: 36px;
-}
-
-.calculation__item--total-hover {
-	cursor: pointer;
 }
 
 .calculation__act {

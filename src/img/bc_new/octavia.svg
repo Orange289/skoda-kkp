@@ -10,7 +10,6 @@
     <style type="text/css">
             .svg_octavia {
                 position: absolute;
-                left: 1px;
 								top: -2px;
             }
             .active {
