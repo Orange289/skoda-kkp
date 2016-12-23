@@ -2,3 +2,30 @@
 .form__radio {
 	display: none;
 }
+
+.form__input {
+	@include font-param(14px, 14px, 400, #333333);
+	display: inline-block;
+	background: #ffffff;
+	box-shadow: none;
+	outline: none;
+	border: 1px solid #dddddd;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	border-radius: 3px;
+}
+
+.form__select {
+	display: inline-block;
+
+
+	&--middle {
+		width: 180px !important;
+	}
+
+	&--small {
+		width: 61px !important;
+		margin-left: 5px !important;
+	}
+
+}

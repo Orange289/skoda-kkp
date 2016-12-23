@@ -39,6 +39,7 @@ var path = {
 		js: 'src/js/**/*.js',
 		sass: 'src/css/**/*.scss',
 		sassEntry: 'src/css/base.scss',
+		libs: 'src/css/libs/*.css',
 		img: 'src/img/**/*.*',
 		fonts: 'src/fonts/**/*.*'
 	},
@@ -118,6 +119,9 @@ gulp.task('watch', function(){
         gulp.start('style:build');
     });
 		watch([path.watch.sassEntry], function(event, cb) {
+				gulp.start('style:build');
+		});
+		watch([path.watch.libs], function(event, cb) {
 				gulp.start('style:build');
 		});
     watch([path.watch.js], function(event, cb) {

@@ -39,3 +39,21 @@
     position:relative;
   }
 }
+
+// @mixin mini-arrow($c, $w1, $w2, $h, $t1, $l1, $t2, $l2) {
+// 	&::before {
+// 		content: '';
+// 		position: absolute;
+// 		width: $w;
+// 		border-top: 1px solid $c;
+// 		top: $t1;
+// 		left: $l1;
+// 	}
+//
+// 	&::after {
+// 		content: '';
+// 		position: absolute;
+// 		width: $
+// 	}
+//
+// }

@@ -1,0 +1,36 @@
+.filters {
+	@include clearfix();
+	position: relative;
+}
+
+.filters__input {
+	padding-left: 16px;
+
+	&--period {
+		width: 164px;
+		margin-left: 15px;
+	}
+
+	&--search {
+		float: right;
+		width: 280px;
+		padding-left: 40px;
+	}
+
+}
+
+.filters__icon {
+	position: absolute;
+
+	&--calendar {
+		top: 9px;
+		left: 10px;
+		cursor: pointer
+	}
+
+	&--loupe {
+		top: 44px;
+		right: 248px;
+	}
+
+}

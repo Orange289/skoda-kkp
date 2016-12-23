@@ -14,8 +14,17 @@
 .page-main__wrapper {
 	position: relative;
 	z-index: 1200;
-	width: 900px;
 	margin: 0 auto;
+
+	&--calc {
+		width: 900px;
+	}
+
+	&--requests {
+		width: 1180px;
+		@include clearfix();
+	}
+
 }
 
 .page-main__container {
@@ -23,3 +32,8 @@
 	padding: 22px 22px;
 	min-height: 100px;
 } //.plain_content_wrapper
+
+.page-main__title {
+	@include font-param(28px, 32px, 500);
+	display: inline-block;
+}

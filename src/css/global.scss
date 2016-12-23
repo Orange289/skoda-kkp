@@ -46,13 +46,6 @@ a {
 	text-decoration: none;
 }
 
-h1 {
-	font-size: 18px;
-	font-weight: 700;
-	line-height: 1.16;
-	margin: 0 0 10px;
-}
-
 h2 {
 	font-size: 19px;
 	font-weight: 400;
@@ -96,7 +89,7 @@ select {
   right: 0;
   bottom: 0;
   background: rgba(53, 18, 95, .85);
-  z-index: 1000;
+  z-index: 2000;
   max-height: 100%;
   overflow-y: auto;
   font-size: 13px;
@@ -174,4 +167,35 @@ select {
 
 .hideme {
 	display: none !important;
+}
+
+//chosen
+
+.chosen-container-single .chosen-single {
+	font-size: 14px !important;
+	line-height: 14px !important;
+	border: 1px solid #dddddd;
+	border-radius: 3px;
+	background: #ffffff;
+	color: #333;
+	box-shadow: none;
+	padding-top: 12px !important;
+	padding-bottom: 26px !important;
+	padding-left: 13px;
+	margin-top: -4px !important;
+}
+
+.select_wrap {
+    position: relative;
+
+    .icon {
+        fill: #4ba82e;
+        // width: 11px;
+        // height: 6px;
+        position: absolute;
+        z-index: 1;
+        right: 11px;
+        top: 14px;
+    }
+
 }

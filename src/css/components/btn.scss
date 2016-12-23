@@ -95,6 +95,45 @@
 		padding: 5px 16px;
 	}
 
+	&--recipients {
+		@include font-param(14px, 14px, 700);
+		padding-top: 12px;
+		padding-bottom: 8px;
+		background-color: #ffffff;
+		border: 1px solid #dddddd;
+		border-radius: 3px;
+		padding-left: 43px;
+		padding-right: 17px;
+		margin-left: 17px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 10px;
+			left: 19px;
+			@include size(12px);
+			border: 2px solid #000000;
+			border-radius: 50%;
+		}
+
+		&::after {
+			content: 'i';
+			font-size: 10px;
+			position: absolute;
+			top: 12px;
+			left: 26px;
+		}
+
+	}
+
+	&--calendar {
+		position: absolute;
+		top: 32px;
+		left: 340px;
+		@include size(37px);
+		background-color: transparent;
+	}
+
 }
 
 .btn__ico-location {
