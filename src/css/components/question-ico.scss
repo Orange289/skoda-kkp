@@ -1,0 +1,12 @@
+.question-ico {
+	position: absolute;
+	top: 8px;
+	left: 25px;
+	text-align: center;
+	@include size(16px);
+	@include font-param(10px, 16px, 700, #4ba82e);
+	background-color: #ddf1d8;
+	border-radius: 50%;
+	margin-left: 5px;
+	cursor: pointer;
+}

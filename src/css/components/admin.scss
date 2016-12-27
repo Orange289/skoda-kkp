@@ -1,0 +1,65 @@
+//common styles for admin-pages
+
+.admin {
+	padding-top: 0px;
+	padding-bottom: 236px;
+}
+
+.admin__wrapper {
+	width: 1180px;
+	@include clearfix();
+}
+
+.admin__head {
+	@include clearfix();
+	padding-bottom: 16px;
+	border-bottom: 1px solid #dddddd;
+
+	a {
+		@include font-param(14px, 41px, 400, #4ba82e);
+		float: right;
+	}
+
+}
+
+.admin__filters {
+	padding-top: 30px;
+	padding-bottom: 28px;
+}
+
+.admin__title {
+	@include font-param(28px, 0, 500);
+	display: inline-block;
+}
+
+.admin__table {
+	@include font-param(14px, 32px, 400, #000000);
+	border-bottom: 1px solid #dddddd;
+
+ 	table {
+ 		border-collapse: collapse;
+ 		width: 100%;
+ 	}
+
+}
+
+.admin__table-head {
+	@include font-param(14px, 32px, 700);
+	border-bottom: 1px solid #dddddd;
+
+	td {
+		padding-bottom: 8px;
+	}
+
+}
+
+.admin__table-content {
+	@include font-param(14px, 32px, 400, #000000);
+	padding-top: 23px;
+	padding-bottom: 23px;
+
+	td {
+		padding-bottom: 23px;
+	}
+
+}

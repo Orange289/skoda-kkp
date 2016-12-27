@@ -1,31 +1,53 @@
-.requests {
-	padding: 0;
-	padding-bottom: 236px;
-}
-
-.requests__title {
-	line-height: 0;
-}
-
-.requests__head {
-	@include clearfix();
-	padding-bottom: 16px;
-	border-bottom: 1px solid #dddddd;
-
-	a {
-		@include font-param(14px, 32px, 400, #4ba82e);
-		float: right;
-	}
-
-}
-
-.requests__filters {
-	padding-top: 30px;
-	padding-bottom: 33px;
+.requests__pagination {
+	float: left;
+	min-width: 75px;
+	padding-top: 33px;
 }
 
 .requests__howmuch {
 	@include font-param(13px, 32px, 400);
 	padding-top: 30px;
 	float: right;
+}
+
+.requests__col {
+
+		&--1 {
+			width: 200px;
+		}
+
+		&--2 {
+			width: 300px;
+		}
+
+		&--3 {
+			width: 300px;
+		}
+
+		&--4 {
+			width: 200px;
+		}
+
+		&--5 {
+			width: 175px;
+		}
+
+}
+
+.requests__table-content {
+
+	&--empty {
+		@include font-param(18px, 32px, 400, #000000);
+		text-align: center;
+		height: 274px;
+		padding-top: 51px;
+		display: none;
+
+		a {
+			color: #4ba82e;
+			border-bottom: 1px solid #4ba82e;
+		}
+
+	}
+
 }

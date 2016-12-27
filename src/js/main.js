@@ -1,30 +1,3 @@
-//стилизация селекторов с помощью formstyler
-
-// (function($) {
-// $(function() {
-// 	$('select').styler({
-// 		onFormStyled: function() {},
-// 		onSelectOpened: function() {
-// 			$(this).find('.jq-selectbox__trigger-arrow').css({
-// 				'border-top-color':'#10b2ee',
-// 				'transform':'rotate(135deg)',
-// 				'top':'17px'
-// 			})
-// 		},
-// 		onSelectClosed: function() {
-// 			$(this).find('.jq-selectbox__trigger-arrow').css({
-// 				'position':'absolute',
-// 				'top':'12px',
-// 				'border-bottom':'1px solid #59af3f',
-// 				'border-left':'1px solid #59af3f',
-// 				'transform':'rotate(-45deg)'
-// 			})
-// 		}
-// 	});
-// });
-// })(jQuery);
-//
-//
 $(document).ready(function(){
 
 //main slider init
@@ -435,4 +408,125 @@ $(document).on('click',function(e){
 		}
 	});
 
-});
+	//datepicker init
+function datePicker() {
+    $(".js_datepicker").datepicker($.datepicker.regional["ru"]);
+
+    $(document).on('click', '.js_datepicker_show', function () {
+        if (!$(this).siblings(".js_datepicker").prop('disabled')) {
+            $(this).siblings(".js_datepicker").datepicker("show");
+        }
+    });
+}
+datePicker();
+
+	function eventCalendar() {
+	    $.datepicker.setDefaults($.datepicker.regional[ "ru" ]);
+
+	    $('.js_event_calendar').datepicker( {
+	        showOtherMonths: true,
+	        onChangeMonthYear: function(year,month, inst) {
+	            setEvents(month, $(this));
+	        }
+	    });
+
+	    var currentMonth = $( ".js_event_calendar" ).datepicker( "getDate" ).getMonth() + 1;
+	    setEvents(currentMonth, $('.js_event_calendar'));
+	}
+
+	//инициализация
+	if($('.js_event_calendar').length) {
+	    eventCalendar();
+	}
+
+	//добавляем события в календарь
+	function setEvents(month, thisItem) {
+	    $.ajax({
+	        url: 'temp/data/events.json',
+	        type: 'get',
+	        dataType: 'json',
+	        data: {'month': month},
+	        success: function(eventsData) {
+	            for (var i in eventsData) {
+	                var day = eventsData[i].day;
+	                var link =  eventsData[i].link;
+
+	                thisItem.find('a.ui-state-default').each(function(){
+	                    var calendarDay = $(this).text();
+	                    if(calendarDay == day) {
+	                        $(this).addClass('has_event');
+	                        $(this).attr('href',link)
+	                    }
+	                });
+	            }
+	            preventDatepicker(thisItem);
+	        }
+	    });
+	}
+
+	//предотвращаем выделеие даты в календаре
+	function preventDatepicker (thisItem) {
+	    var elems = thisItem.find('.ui-state-default').parents('.ui-datepicker-calendar');
+	    for (var i = 0; i < elems.length; i++) {
+	      elems[i].addEventListener("click", prevent, true);
+	    }
+	    function prevent(event) {
+	        var linkSource = event.target;
+	        if ($(linkSource).hasClass('has_event')) {
+	            var linkItem = $(linkSource).attr('href');
+	            //ручной переход по ссылке
+	            location.href = linkItem;
+	        }
+	        event.stopPropagation();
+	        event.preventDefault();
+	    }
+	}
+
+
+	$( ".datepicker" ).datepicker({
+	  showOtherMonths: true,
+	  selectOtherMonths: true,
+	  showOn: "both",
+	  buttonImageOnly: true,
+	  dateFormat: "dd.mm.yy",
+	  monthNames: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь","Декабрь" ],
+	  monthNamesShort: [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек" ],
+	  dayNames: [ "Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота" ],
+	  dayNamesShort: [ "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб" ],
+	  dayNamesMin: [ "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб" ],
+	  firstDay: 1,
+	});
+
+
+	// input mask
+	function maskedInput() {
+			$(".js_date_mask").mask("99.99.9999");
+			$(".js_time_mask").mask("99:99");
+			$(".js_phone_mask").mask("(999) 999-99-99");
+	}
+	maskedInput();
+
+	//open dealer-list (header)
+
+	$(".page-header__dealer-name").on("click", function(){
+		$(this).toggleClass("page-header__dropped");
+		$(this).parents(".page-header__dealer").find(".page-header__dealer-list").slideToggle();
+	});
+
+	$(".page-header__dealer-item").on("click", function(){
+		var $newval = $(this).text();
+		$(".page-header__dealer-list").css('display','none');
+		$(".page-header__dealer-name").removeClass("page-header__dropped");
+		$(".page-header__dealer-name").text($newval);
+	});
+
+	$(".question-ico").hover(function() {
+		$(".parts__comment").toggleClass("parts__comment-show");
+	},
+		function() {
+			$(".parts__comment").toggleClass("parts__comment-show");
+		}
+	)
+
+
+})

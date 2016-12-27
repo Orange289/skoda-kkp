@@ -4,7 +4,10 @@ $('body').append('<div class="kdx-nav" >' +
         '<div class="kdx-nav__body clearfix">' +
 								'<a href="index.html">калькулятор</a>' +
 				        '<a href="list.html">модели</a>' +
+								'<h4>админка</h4>' +
 								'<a href="requests.html">список заявок</a>' +
+								'<a href="parts.html">категории запчастей</a>' +
+								'<a href="discounts.html">скидки</a>' +
         '</div>' +
     '</div>');
 

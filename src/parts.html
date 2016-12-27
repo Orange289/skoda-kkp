@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html class='no-js'>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+	<title>Skoda</title>
+	<meta name='description' content=''>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/>
+	<link rel='icon' href='/favicon.png' type='image/png'/>
+	<link rel='apple-touch-icon-precomposed' href='/apple-touch-icon-precomposed.png'/>
+
+	<link rel='stylesheet' href='css/style.css'>
+
+	<script src='js/jquery-1.11.1.min.js'></script>
+
+	<script src='js/jquery-ui.min.js'></script>
+
+	<script src='js/modernizr-2.8.3-respond-1.1.0.min.js'></script>
+
+	<script src='js/jquery.easing-1.3.js'></script>
+
+	<script src='js/jquery.mousewheel.min.js'></script>
+
+	<script src='js/chosen.jquery.js'></script>
+
+	<script src='js/libs.js'></script>
+
+</head>
+<body>
+	<header class='page-header'>
+		<div class='page-header__logo'>
+			<img src='img/img-logo.png' width='137' height='30' alt='logo'>
+		</div>
+		<nav class='page-header__nav'>
+			<ul>
+				<li class='page-header__link'><a href='requests.html'>Заявки</a></li>
+				<li class='page-header__link page-header__link--active'><a>Запчасти</a></li>
+				<li class='page-header__link'><a href='discounts.html'>Скидки</a></li>
+				<li class='page-header__link'><a href='#'>Наценка</a></li>
+				<li class='page-header__link'><a href='#'>Стоимость н/ч</a></li>
+				<li class='page-header__link'><a href='#'>Расходники</a></li>
+				<li class='page-header__link'><a href='#'>Демо-калькулятор</a></li>
+			</ul>
+		</nav>
+		<div class='page-header__user'>
+			<div class='page-header__login'>
+				<svg class='page-header__icon-login'
+				 xmlns="http://www.w3.org/2000/svg"
+				 xmlns:xlink="http://www.w3.org/1999/xlink"
+				 width="14px" height="16px">
+				<image  x="0px" y="0px" width="14px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQBAMAAADUulMJAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEUAAABKpClKpClKpClKpClKpClKpClKpClKpClKpClKpClKpCn////S6IoEAAAAC3RSTlMAEJ/P72AwIIC/cC5+6bQAAAABYktHRAyBs1FjAAAAB3RJTUUH4AwWEwgAvKvDQQAAAGtJREFUCNdjYGDU3r1JgIGBQXj37t2GQFrblSFkE5DeHcDAuoWBgW03iJ0Apxl2FzCwg9jWDQwcm4F09FYQYmAQ2W282xGo3nvLTO8tCUDjpjNUAg3s3gWUW72DwbsBSHNsYdgNAQyzwdROAPkAJqCkgr/LAAAAAElFTkSuQmCC" />
+				</svg>
+			</div>
+			<div class='page-header__dealer'>
+				<div class='page-header__dealer-name'>ДЦ Геленджик Авто</div>
+				<svg class='icon'
+				 xmlns="http://www.w3.org/2000/svg"
+				 xmlns:xlink="http://www.w3.org/1999/xlink"
+				 width="15.5px" height="7.5px">
+				<path fill-rule="evenodd"  stroke="rgb(92, 175, 50)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+				 d="M1.500,0.500 L7.500,4.500 L13.500,0.500 "/>
+				</svg>
+				<ul class='page-header__dealer-list'>
+					<li class='page-header__dealer-item'>ДЦ Геленджик Авто</li>
+					<li class='page-header__dealer-item'>ООО Алем Авто ЛТД</li>
+					<li class='page-header__dealer-item'>Европа Авто</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<main class='page-main parts admin'>
+		<div class='page-main__wrapper admin__wrapper'>
+			<div class='breadcrumbs'>
+				<ul>
+					<li><a href='#'>Главная</a><span class='mini-arrow'></span></li>
+					<li><a href='#'>Стоимость запчастей</a><span class='mini-arrow'></span></li>
+					<li><a href='#'>Категория 1</a><span class='mini-arrow'></span></li>
+				</ul>
+			</div>
+			<div class='admin__head parts__head'>
+				<h1 class='admin__title parts__title'>Категория 1</h1>
+				<a href='#'>Экспорт списка в XLS</a>
+			</div>
+			<div class='admin__filters filters'>
+				<div class='parts__filters'>
+					<label class='parts__filters-item'>
+						<input class='form__checkbox form__checkbox--parts' type='checkbox'>
+						<span></span>
+						Базовая наценка
+					</label>
+					<label class='parts__filters-item'>
+						<input class='form__checkbox form__checkbox--parts' type='checkbox' checked>
+						<span></span>
+						Позиции со скидкой
+					</label>
+				</div>
+				<button class='btn btn--search btn--green'>Найти</button>
+				<input class='form__input filters__input filters__input--admin filters__input--parts' type='search' placeholder='Введите артикул'>
+			</div>
+			<div class='admin__table parts__table'>
+				<table class='admin__table-head parts__table-head'>
+					<tr>
+						<td class='parts__col parts__col--1'>Наименование</td>
+						<td class='parts__col parts__col--2'>Артикул</td>
+						<td class='parts__col parts__col--3'>Было</td>
+						<td class='parts__col parts__col--4'>Наценка</td>
+						<td class='parts__col parts__col--5'>Стало</td>
+						<td class='parts__col parts__col--6'>Скидка</td>
+						<td class='parts__col parts__col--7'>Итог</td>
+					</tr>
+				</table>
+				<div class='admin__table-content parts__table-content'>
+					<table>
+						<tr>
+							<td class='parts__col parts__col--1'>Дверь левая передняя</td>
+							<td class='parts__col parts__col--2'>AS9863</td>
+							<td class='parts__col parts__col--3'>10 000 Р</td>
+							<td class='parts__col parts__col--4'>1.3</td>
+							<td class='parts__col parts__col--5'>13 000 Р</td>
+							<td class='parts__col parts__col--6'>1</td>
+							<td class='parts__col parts__col--7'>13 000 Р</td>
+						</tr>
+						<tr><td>Дверь левая передняя</td><td>AS9863</td><td>10 000 Р</td><td>1.3</td><td>13 000 Р</td><td>0.9 <span class='question-ico'>? <i class='parts__comment'>Комментарии из колонки "Комментарий к скидке"</i></span></td><td><del>13 000 Р</del>11 700 Р</td></tr>
+						<tr><td>Дверь левая передняя</td><td>AS9863</td><td>10 000 Р</td><td>1.3</td><td>13 000 Р</td><td>1</td><td>13 000 Р</td></tr>
+						<tr><td>Дверь левая передняя</td><td>AS9863</td><td>10 000 Р</td><td>1.3</td><td>13 000 Р</td><td>1</td><td>13 000 Р</td></tr>
+						<tr><td>Дверь левая передняя</td><td>AS9863</td><td>10 000 Р</td><td>1.3</td><td>13 000 Р</td><td>1</td><td>13 000 Р</td></tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src='js/main.js'></script>
+	<script src='js/layout.js'></script>
+</body>

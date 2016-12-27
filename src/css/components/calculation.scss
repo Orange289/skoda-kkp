@@ -136,20 +136,6 @@
 
 }
 
-.form__checkbox:checked ~ span {
-	position: absolute;
-	top: 5px;
-	left: 3px;
-	@include size(9px, 3px);
-	border-left: 2px solid #4fa637;
-	border-bottom: 2px solid #4fa637;
-	transform: rotate(-45deg);
-}
-
-.form__checkbox:checked:disabled ~ span {
-	border-color: #dcdcdc;
-}
-
 .calculation__suboption {
 	@include font-param(12px, 12px, 400);
 	margin-left: 37px;

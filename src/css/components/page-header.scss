@@ -4,7 +4,7 @@
 	border-bottom: 1px solid #dddddd;
 	min-height: 69px;
 	width: 100%;
-	min-width: 1180px;
+	min-width: 1216px;
 
 	ul {
 		list-style: none;
@@ -54,6 +54,10 @@
 
 .page-header__link {
 
+	&--active a:hover {
+		color: #2b2b2b;
+	}
+
 	&--active a::after {
 		content: '';
 		position: absolute;
@@ -95,14 +99,40 @@
 
 .page-header__user {
 	float: right;
-	width: 275px;
+	width: 310px;
 	@include clearfix();
 }
 
 .page-header__dealer {
 	float: right;
-	width: 204px;
+
 	border-left: 1px solid #dddddd;
+	cursor: pointer;
+	position: relative;
+
+	.icon {
+		position: absolute;
+		top: 32px;
+		left: 199px;
+	}
+
+}
+
+.page-header__dealer-name {
+	@include size(214px, 52px);
+	padding-left: 25px;
+	padding-top: 17px;
+	border-bottom: none;
+}
+
+.page-header__dropped {
+	border-bottom: 3px solid #4ba82e;
+	height: 50px;
+}
+
+.page-header__dropped + .icon {
+	transform: rotate(180deg) translateY(3px);
+	transition: transform .3s;
 }
 
 .page-header__login {
@@ -122,4 +152,30 @@
 
 .page-header__dealer-list {
 	display: none;
+	width: 100%;
+	position: absolute;
+	top: 100%;
+	left: -1px;
+	border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	background-color: #ffffff;
+	z-index: 2000;
+
+	li {
+		padding-left: 25px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #dddddd;
+
+		&:last-of-type {
+			border-bottom: none;
+		}
+
+		&:hover {
+			color: #4ba82e;
+		}
+
+	}
+
 }

@@ -182,7 +182,7 @@ select {
 	padding-top: 12px !important;
 	padding-bottom: 26px !important;
 	padding-left: 13px;
-	margin-top: -4px !important;
+	margin-top: -3px !important;
 }
 
 .select_wrap {
@@ -190,12 +190,37 @@ select {
 
     .icon {
         fill: #4ba82e;
-        // width: 11px;
-        // height: 6px;
         position: absolute;
         z-index: 1;
         right: 11px;
         top: 14px;
     }
+
+}
+
+//datepicker
+
+.datepicker_wrap {
+	position: relative;
+	display: inline-block;
+
+	.icon {
+		position: absolute;
+		top: 11px;
+		cursor: pointer;
+
+		&--from {
+			left: 170px;
+		}
+
+		&--to {
+
+		}
+
+	}
+
+	label {
+		@include font-param(13px, 32px, 400);
+	}
 
 }
