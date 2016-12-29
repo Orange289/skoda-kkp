@@ -12,6 +12,11 @@ var gulp = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps'),
 	rigger = require('gulp-rigger'),
 	cssmin = require('gulp-csso'),
+	svgSprite = require('gulp-svg-sprites'),
+	svgmin = require('gulp-svgmin'),
+	svgstore = require('gulp-svgstore'),
+	cheerio = require('gulp-cheerio'),
+	replace = require('gulp-replace'),
 	imagemin = require('gulp-imagemin'),
 	pngquant = require('imagemin-pngquant'),
 	browserSync = require('browser-sync'),
@@ -31,7 +36,8 @@ var path = {
 		js: 'src/js/*.js',
 		sass: 'src/css/**/*.scss',
 		sassEntry: 'src/css/base.scss',
-		img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+		img: 'src/img/**/*.{png,jpeg,gif}', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+		svg: 'src/img/icons/*.svg',
 		fonts: 'src/fonts/**/*.*'
 	},
 	watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
@@ -40,7 +46,7 @@ var path = {
 		sass: 'src/css/**/*.scss',
 		sassEntry: 'src/css/base.scss',
 		libs: 'src/css/libs/*.css',
-		img: 'src/img/**/*.*',
+		img: 'src/img/**/*.{png,jpeg.gif}',
 		fonts: 'src/fonts/**/*.*'
 	},
 	clean: './build'
@@ -84,6 +90,20 @@ gulp.task('style:build', function () {
         .pipe(reload({stream: true}));
 });
 
+
+//svg sprite
+
+gulp.task('svgsprite', function() {
+	return gulp.src(path.src.svg)
+		.pipe(svgstore({
+			inlineSvg: true
+		}))
+		// .pipe(rename('sprite.svg'))
+		.pipe(gulp.dest(path.build.img));
+});
+
+//
+
 gulp.task('image:build', function() {
 	gulp.src(path.src.img)
 			.pipe(plumber())
@@ -108,7 +128,8 @@ gulp.task('build', [
     'js:build',
     'style:build',
     'fonts:build',
-    'image:build'
+    'image:build',
+		'svgsprite'
 ]);
 
 gulp.task('watch', function(){

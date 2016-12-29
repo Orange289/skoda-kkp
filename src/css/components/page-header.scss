@@ -146,6 +146,8 @@
 
 .page-header__icon-login {
 	position: absolute;
+	@include size(14px, 16px);
+	fill: red;
 	top: 22px;
 	left: 28px;
 }

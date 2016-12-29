@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	svg4everybody({});
+
 //main slider init
 	if(  $('.js_slick_slider').length>0) {
 		$('.js_slick_slider').slick({
@@ -527,6 +529,10 @@ datePicker();
 			$(".parts__comment").toggleClass("parts__comment-show");
 		}
 	)
+
+	$(".btn--exception").on("click", function(){
+		$(".admin__add-exception").css('display','block');
+	})
 
 
 })

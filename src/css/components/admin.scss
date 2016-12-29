@@ -22,6 +22,18 @@
 
 }
 
+.admin__pagination {
+	float: left;
+	min-width: 75px;
+	padding-top: 33px;
+}
+
+.admin__howmuch {
+	@include font-param(13px, 32px, 400);
+	padding-top: 30px;
+	float: right;
+}
+
 .admin__filters {
 	padding-top: 30px;
 	padding-bottom: 28px;
@@ -57,9 +69,49 @@
 	@include font-param(14px, 32px, 400, #000000);
 	padding-top: 23px;
 	padding-bottom: 23px;
+	min-height: 279px;
 
 	td {
 		padding-bottom: 23px;
 	}
 
+}
+
+.admin__edit-block {
+	margin-top: 30px;
+	margin-bottom: 43px;
+	@include font-param(14px, 32px, 400);
+
+	input {
+		padding-left: 15px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	&--pricing {
+
+		input {
+			width: 45px;
+		}
+
+	}
+
+	&--hours,
+	&--supplements {
+
+		input {
+			width: 65px;
+		}
+
+	}
+
+}
+
+.admin .admin__table-title {
+	@include font-param(20px, 32px, 400);
+	margin-bottom: 28px;
+}
+
+.admin__add-exception {
+	display: none;
 }

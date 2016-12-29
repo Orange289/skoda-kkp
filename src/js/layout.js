@@ -8,6 +8,9 @@ $('body').append('<div class="kdx-nav" >' +
 								'<a href="requests.html">список заявок</a>' +
 								'<a href="parts.html">категории запчастей</a>' +
 								'<a href="discounts.html">скидки</a>' +
+								'<a href="pricing.html">наценка</a>' +
+								'<a href="hours.html">стоимость н/ч</a>' +
+								'<a href="supplements.html">расходники</a>' +
         '</div>' +
     '</div>');
 

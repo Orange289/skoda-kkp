@@ -43,6 +43,7 @@
 }
 
 .form__input {
+	font-family: 'SkodaPro', sans-serif;
 	@include font-param(14px, 14px, 400, #333333);
 	display: inline-block;
 	background: #ffffff;
@@ -61,11 +62,26 @@
 		border-color: #5caf32;
 	}
 
+	&[disabled] {
+		background-color: #f6f6f6;
+		color: #939393;
+
+		&:hover {
+			border-color: #e4e4e4;
+		}
+	}
+
+	&--exception {
+		padding-left: 15px;
+		width: 165px;
+		margin-right: 15px;
+	}
+
 }
 
 .form__select {
 	display: inline-block;
-
+	margin-top: 4px !important;
 
 	&--middle {
 		width: 180px !important;

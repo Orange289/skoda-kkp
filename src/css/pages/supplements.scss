@@ -1,0 +1,25 @@
+.supplements__col {
+
+	&--1,
+	&--2,
+	&--3 {
+		width: 297px;
+	}
+
+	&--4 {
+		width: 238px;
+	}
+
+}
+
+.supplements__row {
+
+	.form__select {
+		width: 280px;
+	}
+
+	.form__input {
+		width: 90px ;
+	}
+
+}

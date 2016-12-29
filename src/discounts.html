@@ -12,6 +12,10 @@
 
 	<link rel='stylesheet' href='css/style.css'>
 
+	<script src='js/svg4everybody.min.js'></script>
+
+	<!-- <script src='js/sprite.js'></script> -->
+
 	<script src='js/jquery-1.11.1.min.js'></script>
 
 	<script src='js/jquery-ui.min.js'></script>
@@ -37,9 +41,9 @@
 				<li class='page-header__link'><a href='requests.html'>Заявки</a></li>
 				<li class='page-header__link'><a href='parts.html'>Запчасти</a></li>
 				<li class='page-header__link page-header__link--active'><a>Скидки</a></li>
-				<li class='page-header__link'><a href='#'>Наценка</a></li>
-				<li class='page-header__link'><a href='#'>Стоимость н/ч</a></li>
-				<li class='page-header__link'><a href='#'>Расходники</a></li>
+				<li class='page-header__link'><a href='pricing.html'>Наценка</a></li>
+				<li class='page-header__link'><a href='hours.html'>Стоимость н/ч</a></li>
+				<li class='page-header__link'><a href='supplements.html'>Расходники</a></li>
 				<li class='page-header__link'><a href='#'>Демо-калькулятор</a></li>
 			</ul>
 		</nav>
@@ -100,7 +104,7 @@
 							<td class='discounts__col discounts__col--7'></td>
 						</tr>
 					</table>
-					<div class='admin__table-content requests__table-content requests__table-content--full'>
+					<div class='admin__table-content'>
 						<table>
 							<tr>
 								<td class='discounts__col discounts__col--1'>Категория 1</td>
@@ -137,7 +141,7 @@
 							<td class='discounts__col discounts__col--13'></td>
 						</tr>
 					</table>
-					<div class='admin__table-content requests__table-content requests__table-content--full'>
+					<div class='admin__table-content'>
 						<table>
 							<tr>
 								<td class='discounts__col discounts__col--8'>Категория 1</td>
@@ -155,15 +159,15 @@
 					</div>
 				</div>
 			</div>
-			<div class='requests__pagination pagination'>
+			<div class='admin__pagination pagination'>
 				<input class='pagination__item' type='radio' name='pages' id='page_1' checked><label for='page_1'>1</label>
 				<input class='pagination__item' type='radio' name='pages' id='page_2'><label for='page_2'>2</label>
 				<input class='pagination__item' type='radio' name='pages' id='page_3'><label for='page_3'>3</label>
 			</div>
-			<div class='requests__howmuch howmuch'>
+			<div class='admin__howmuch howmuch'>
 				Элементов на странице
 				<div class='form__select form__select--small select_wrap'>
-					<select class='js_chosen_select' name='howmuch' id='howmuch'>
+					<select class='js_chosen_select' name='howmuch'>
 						<option value='5'>5</option>
 						<option value='10'>10</option>
 						<option value='20'>20</option>

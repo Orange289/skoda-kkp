@@ -10,6 +10,8 @@
 	&--green {
 		background-color: #4ba82e;
 		color: #ffffff;
+		font-weight: 700;
+		border-radius: 3px;
 
 		&:hover {
 			background-color: #398124;
@@ -53,8 +55,8 @@
 		display: inline-block;
 		float: right;
 		width: auto;
-		font-size: 12px;
-		line-height: 14px;
+		@include font-param(12px, 14px, 400, #ffffff);
+		border-radius: 0;
 		padding: 1px 15px 5px;
 		margin-top: 3px;
 	}
@@ -62,9 +64,9 @@
 	&--send {
 		padding: 9px 18px 8px;
 		margin-bottom: 5px;
-		font-size: 16px;
-		line-height: 28px;
+		@include font-param(16px, 28px, 400, #ffffff);
 		margin-top: 20px;
+		border-radius: 0;
 	}
 
 	&--calculation {
@@ -74,6 +76,7 @@
 		padding-bottom: 14px;
 		padding-right: 46px;
 		margin-left: 36px;
+		border-radius: 0;
 		position: relative;
 
 		&::after {
@@ -129,7 +132,8 @@
 
 	}
 
-	&--discount {
+	&--discount,
+	&--exception {
 		float: right;
 		margin-right: 19px;
 		padding-left: 12px;
@@ -140,12 +144,18 @@
 		@include font-param(14px, 32px, 700, #ffffff);
 		float: right;
 		width: 104px;
-		border-radius: 3px;
 		margin-left: 20px;
 		padding-top: 5px;
 		padding-bottom: 3px;
 	}
 
+	&--edit-block {
+		padding: 12px 14px;
+	}
+
+	&--add-exception {
+		padding: 12px 20px;
+	}
 
 }
 
