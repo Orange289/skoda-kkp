@@ -105,10 +105,14 @@
 		cursor: pointer;
 
 		&--from {
+			@include size(14px, 16px);
+			fill: #5caf32;
 			left: 130px;
 		}
 
 		&--to {
+			@include size(14px, 16px);
+			fill: #5caf32;
 			left: 300px;
 		}
 

@@ -48,14 +48,11 @@
 			</ul>
 		</nav>
 		<div class='page-header__user'>
-			<div class='page-header__login'>
-				<svg class='page-header__icon-login'
-				 xmlns="http://www.w3.org/2000/svg"
-				 xmlns:xlink="http://www.w3.org/1999/xlink"
-				 width="14px" height="16px">
-				<image  x="0px" y="0px" width="14px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQBAMAAADUulMJAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEUAAABKpClKpClKpClKpClKpClKpClKpClKpClKpClKpClKpCn////S6IoEAAAAC3RSTlMAEJ/P72AwIIC/cC5+6bQAAAABYktHRAyBs1FjAAAAB3RJTUUH4AwWEwgAvKvDQQAAAGtJREFUCNdjYGDU3r1JgIGBQXj37t2GQFrblSFkE5DeHcDAuoWBgW03iJ0Apxl2FzCwg9jWDQwcm4F09FYQYmAQ2W282xGo3nvLTO8tCUDjpjNUAg3s3gWUW72DwbsBSHNsYdgNAQyzwdROAPkAJqCkgr/LAAAAAElFTkSuQmCC" />
+			<a class='page-header__login' href='profile.html'>
+				<svg class='page-header__icon-login'>
+					<use xlink:href='img/sprite.svg#icon_profile'>
 				</svg>
-			</div>
+			</a>
 			<div class='page-header__dealer'>
 				<div class='page-header__dealer-name'>ДЦ Геленджик Авто</div>
 				<svg class='icon'
@@ -89,6 +86,9 @@
 			<div class='admin__edit-block admin__edit-block--supplements'>
 				<span>Базовая стоимость ЛКМ</span>
 				<input class='form__input' type='text' value='1 800 Р' disabled>
+				<svg class='admin__icon admin__icon--edit'>
+					<use xlink:href='img/sprite.svg#icon_edit'>
+				</svg>
 				<button class='btn btn--green btn--edit-block'>Сохранить</button>
 			</div>
 			<div class='admin__table supplements__table'>

@@ -534,5 +534,17 @@ datePicker();
 		$(".admin__add-exception").css('display','block');
 	})
 
+	$(".admin__icon--edit").on("click", function(){
+		$(this).css('display','none');
+		$(".btn--edit-block").css('display','inline-block');
+		$(this).parents('.admin__edit-block').find('.form__input').removeAttr('disabled');
+	})
+
+	$('.btn--edit-block').on("click", function(){
+		$(this).css('display','none');
+		$(this).parents('.admin__edit-block').find('.admin__icon--edit').css('display','inline-block');
+		$(this).parents('.admin__edit-block').find('.form__input').attr('disabled','');
+	})
+
 
 })

@@ -2996,7 +2996,6 @@ select {
 .select_wrap {
   position: relative; }
   .select_wrap .icon {
-    fill: #4ba82e;
     position: absolute;
     z-index: 1;
     right: 11px;
@@ -3478,6 +3477,24 @@ select {
 .admin__add-exception {
   display: none; }
 
+.admin__col {
+  width: 40px; }
+  .admin__col--icons {
+    float: right; }
+
+.admin__icon {
+  fill: #c0c4c5;
+  cursor: pointer; }
+  .admin__icon:hover {
+    fill: #377220; }
+  .admin__icon--edit {
+    width: 14px;
+    height: 17px;
+    margin-right: 6px; }
+  .admin__icon--basket {
+    width: 15px;
+    height: 16px; }
+
 .auto-box {
   position: relative;
   padding: 0;
@@ -3613,6 +3630,10 @@ select {
     background-color: #ffffff;
     border: 1px solid #dddddd;
     border-radius: 3px; }
+    .btn--white:hover {
+      background-color: #000000;
+      color: #ffffff;
+      border-color: #000000; }
   .btn--info {
     padding-left: 43px;
     padding-right: 17px;
@@ -3648,9 +3669,20 @@ select {
     padding-top: 5px;
     padding-bottom: 3px; }
   .btn--edit-block {
+    display: none;
     padding: 12px 14px; }
   .btn--add-exception {
     padding: 12px 20px; }
+  .btn--profile-photo {
+    display: block; }
+    .btn--profile-photo input {
+      position: absolute;
+      left: -99999px; }
+  .btn--profile-edit, .btn--profile-password {
+    font-size: 16px;
+    line-height: 16px;
+    padding: 16px 42px;
+    margin-right: 6px; }
 
 .btn__ico-location {
   display: inline-block;
@@ -4110,8 +4142,14 @@ select {
     top: 11px;
     cursor: pointer; }
     .form__datepicker .form__icon--from {
+      width: 14px;
+      height: 16px;
+      fill: #5caf32;
       left: 130px; }
     .form__datepicker .form__icon--to {
+      width: 14px;
+      height: 16px;
+      fill: #5caf32;
       left: 300px; }
   .form__datepicker label {
     font-size: 13px;
@@ -4179,7 +4217,7 @@ select {
 
 .page-header__nav {
   float: left;
-  width: 690px;
+  min-width: 690px;
   margin-left: 48px; }
   .page-header__nav a {
     color: #2b2b2b;
@@ -4212,7 +4250,7 @@ select {
     content: '';
     position: absolute;
     top: 27px;
-    left: 129px;
+    left: 87%;
     width: 16px;
     height: 16px;
     background-color: #4ba82e;
@@ -4221,7 +4259,7 @@ select {
     content: '';
     position: absolute;
     top: 32px;
-    left: 133px;
+    left: 90%;
     width: 7px;
     height: 3px;
     border-bottom: 1px solid #ffffff;
@@ -4231,7 +4269,7 @@ select {
 
 .page-header__user {
   float: right;
-  width: 310px; }
+  min-width: 310px; }
   .page-header__user::after {
     content: '';
     display: table;
@@ -4268,8 +4306,10 @@ select {
 
 .page-header__login {
   float: right;
-  width: 69px;
-  height: 69px;
+  display: inline-block;
+  vertical-align: top;
+  width: 66px;
+  height: 66px;
   border-left: 1px solid #dddddd;
   position: relative;
   margin: 0;
@@ -4380,7 +4420,7 @@ select {
   color: #000000;
   cursor: pointer;
   margin-right: 7px;
-  padding: 7px 16px;
+  padding: 7px 15px;
   border-radius: 40px;
   border: 1px solid #dddddd; }
 
@@ -4717,6 +4757,61 @@ select {
 
 .pricing__row .form__select {
   width: 380px !important; }
+
+.profile .breadcrumbs {
+  padding-bottom: 20px; }
+
+.profile__tabs {
+  margin-top: 0;
+  margin-bottom: 50px; }
+
+.profile__photo {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 18px;
+  margin-top: 5px; }
+
+.profile__img {
+  width: 138px;
+  height: 145px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  position: relative;
+  margin-bottom: 10px; }
+
+.profile__icon {
+  width: 40px;
+  height: 40px;
+  fill: #b9b9b9;
+  position: absolute;
+  top: 55px;
+  left: 51px; }
+
+.profile__info {
+  font-size: 14px;
+  color: #2b2b2b;
+  display: inline-block;
+  vertical-align: top; }
+  .profile__info span {
+    display: block;
+    color: #000000;
+    margin-top: 10px; }
+
+.profile__title {
+  font-family: 'SkodaPro', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 16px; }
+
+.profile__personal {
+  margin-bottom: 30px; }
+
+.profile__point {
+  margin-bottom: 10px; }
+
+.profile__job {
+  margin-bottom: 30px; }
 
 .requests__col--1 {
   width: 200px; }

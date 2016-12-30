@@ -115,3 +115,31 @@
 .admin__add-exception {
 	display: none;
 }
+
+.admin__col {
+	width: 40px;
+
+	&--icons {
+		float: right;
+	}
+
+}
+
+.admin__icon {
+	fill: #c0c4c5;
+	cursor: pointer;
+
+	&:hover {
+		fill: #377220;
+	}
+
+	&--edit {
+		@include size(14px, 17px);
+		margin-right: 6px;
+	}
+
+	&--basket {
+		@include size(15px, 16px);
+	}
+
+}

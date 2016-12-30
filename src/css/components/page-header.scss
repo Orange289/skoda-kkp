@@ -28,7 +28,7 @@
 
 .page-header__nav {
 	float: left;
-	width: 690px;
+	min-width: 690px;
 	margin-left: 48px;
 
 
@@ -76,7 +76,7 @@
 			content: '';
 			position: absolute;
 			top: 27px;
-			left: 129px;
+			left: 87%;
 			@include size(16px);
 			background-color: #4ba82e;
 			border-radius: 50%;
@@ -86,7 +86,7 @@
 			content: '';
 			position: absolute;
 			top: 32px;
-			left: 133px;
+			left: 90%;
 			@include size(7px, 3px);
 			border-bottom: 1px solid #ffffff;
 			border-left: 1px solid #ffffff;
@@ -99,13 +99,12 @@
 
 .page-header__user {
 	float: right;
-	width: 310px;
+	min-width: 310px;
 	@include clearfix();
 }
 
 .page-header__dealer {
 	float: right;
-
 	border-left: 1px solid #dddddd;
 	cursor: pointer;
 	position: relative;
@@ -137,7 +136,9 @@
 
 .page-header__login {
 	float: right;
-	@include size(69px);
+	display: inline-block;
+	vertical-align: top;
+	@include size(66px);
 	border-left: 1px solid #dddddd;
 	position: relative;
 	margin: 0;

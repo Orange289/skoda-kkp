@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class='no-js'>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+	<title>Skoda</title>
+	<meta name='description' content=''>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/>
+	<link rel='icon' href='/favicon.png' type='image/png'/>
+	<link rel='apple-touch-icon-precomposed' href='/apple-touch-icon-precomposed.png'/>
+
+	<link rel='stylesheet' href='css/style.css'>
+
+	<script src='js/svg4everybody.min.js'></script>
+
+	<!-- <script src='js/sprite.js'></script> -->
+
+	<script src='js/jquery-1.11.1.min.js'></script>
+
+	<script src='js/jquery-ui.min.js'></script>
+
+	<script src='js/modernizr-2.8.3-respond-1.1.0.min.js'></script>
+
+	<script src='js/jquery.easing-1.3.js'></script>
+
+	<script src='js/jquery.mousewheel.min.js'></script>
+
+	<script src='js/chosen.jquery.js'></script>
+
+	<script src='js/libs.js'></script>
+
+</head>
+<body>
+	<header class='page-header'>
+		<div class='page-header__logo'>
+			<img src='img/img-logo.png' width='137' height='30' alt='logo'>
+		</div>
+		<nav class='page-header__nav'>
+			<ul>
+				<li class='page-header__link'><a href='requests.html'>Заявки</a></li>
+				<li class='page-header__link'><a href='parts.html'>Запчасти</a></li>
+				<li class='page-header__link'><a href='discounts.html'>Скидки</a></li>
+				<li class='page-header__link'><a href='pricing.html'>Наценка</a></li>
+				<li class='page-header__link'><a href='hours.html'>Стоимость н/ч</a></li>
+				<li class='page-header__link'><a href='supplements.html'>Расходники</a></li>
+				<li class='page-header__link'><a href='#'>Демо-калькулятор</a></li>
+			</ul>
+		</nav>
+		<div class='page-header__user'>
+
+			<div class='page-header__login' style='cursor:default;'>
+				<svg class='page-header__icon-login'>
+					<use xlink:href='img/sprite.svg#icon_profile'>
+				</svg>
+			</div>
+			<div class='page-header__dealer'>
+				<div class='page-header__dealer-name'>ДЦ Геленджик Авто</div>
+				<svg class='icon'
+				 xmlns="http://www.w3.org/2000/svg"
+				 xmlns:xlink="http://www.w3.org/1999/xlink"
+				 width="15.5px" height="7.5px">
+				<path fill-rule="evenodd"  stroke="rgb(92, 175, 50)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+				 d="M1.500,0.500 L7.500,4.500 L13.500,0.500 "/>
+				</svg>
+				<ul class='page-header__dealer-list'>
+					<li class='page-header__dealer-item'>ДЦ Геленджик Авто</li>
+					<li class='page-header__dealer-item'>ООО Алем Авто ЛТД</li>
+					<li class='page-header__dealer-item'>Европа Авто</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<main class='page-main discounts admin profile'>
+		<div class='page-main__wrapper admin__wrapper'>
+			<div class='breadcrumbs'>
+				<ul>
+					<li><a href='#'>Главная</a><span class='mini-arrow'></span></li>
+					<li><a href='#'>Личный кабинет</a><span class='mini-arrow'></span></li>
+				</ul>
+			</div>
+			<div class='profile__tabs tabs'>
+				<input type='radio' class='form__radio' name='discounts' id='tab-third' checked>
+				<label for='tab-third' class='tabs__option'>Личный кабинет</label>
+			</div>
+			<div class='profile__all'>
+				<div class='profile__photo'>
+					<div class='profile__img'>
+						<svg class='profile__icon'>
+							<use xlink:href='img/sprite.svg#icon_profile_big'>
+						</svg>
+					</div>
+					<label class='btn btn--white btn--profile-photo'>
+						<input type='file' id='upload_photo'>
+						Выбрать фото
+					</label>
+				</div>
+				<div class='profile__info'>
+					<div class='profile__personal'>
+						<h3 class='profile__title'>Евгений Чернов</h3>
+						Email: ech@kodix.ru
+						<span>Телефон: +7 (955) 000 0000</span>
+					</div>
+					<div class='profile__job'>
+						<h3 class='profile__title'>Информация о должности и месте работы</h3>
+						<div class='profile__point'>Тип организации: Дилер</div>
+						<div class='profile__point'>Название дилера:</div>
+						<div class='profile__point'>Отдел:</div>
+						<div class='profile__point'>Должность:</div>
+					</div>
+					<button class='btn btn--green btn--profile-edit'>Редактировать</button>
+					<button class='btn btn--white btn--profile-password'>Изменить пароль</button>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src='js/main.js'></script>
+	<script src='js/layout.js'></script>
+</body>

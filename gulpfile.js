@@ -36,7 +36,7 @@ var path = {
 		js: 'src/js/*.js',
 		sass: 'src/css/**/*.scss',
 		sassEntry: 'src/css/base.scss',
-		img: 'src/img/**/*.{png,jpeg,gif}', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+		img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
 		svg: 'src/img/icons/*.svg',
 		fonts: 'src/fonts/**/*.*'
 	},
@@ -47,6 +47,7 @@ var path = {
 		sassEntry: 'src/css/base.scss',
 		libs: 'src/css/libs/*.css',
 		img: 'src/img/**/*.{png,jpeg.gif}',
+		svg: 'src/img/icons/*.svg',
 		fonts: 'src/fonts/**/*.*'
 	},
 	clean: './build'
@@ -98,6 +99,7 @@ gulp.task('svgsprite', function() {
 		.pipe(svgstore({
 			inlineSvg: true
 		}))
+		.pipe(svgmin())
 		.pipe(rename('sprite.svg'))
 		.pipe(gulp.dest(path.build.img));
 });
@@ -151,6 +153,9 @@ gulp.task('watch', function(){
     watch([path.watch.img], function(event, cb) {
         gulp.start('image:build');
     });
+		watch([path.watch.svg], function(event, cb) {
+				gulp.start('svgsprite');
+		});
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
     });
