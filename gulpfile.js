@@ -98,7 +98,7 @@ gulp.task('svgsprite', function() {
 		.pipe(svgstore({
 			inlineSvg: true
 		}))
-		// .pipe(rename('sprite.svg'))
+		.pipe(rename('sprite.svg'))
 		.pipe(gulp.dest(path.build.img));
 });
 

@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".chosen-select").chosen({disable_search:!0,allow_single_deselect:!0}),$(".chosen-drop-wrapper").mCustomScrollbar({theme:"dark-thick",mouseWheel:!0,scrollInertia:400,mouseWheelPixels:162})});

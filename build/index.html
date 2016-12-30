@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html class='no-js'>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+	<title>Skoda</title>
+	<meta name='description' content=''>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/>
+	<link rel='icon' href='/favicon.png' type='image/png'/>
+	<link rel='apple-touch-icon-precomposed' href='/apple-touch-icon-precomposed.png'/>
+
+	<link rel='stylesheet' href='css/style.css'>
+
+	<script src='js/svg4everybody.min.js'></script>
+
+	<script src='js/modernizr-2.8.3-respond-1.1.0.min.js'></script>
+
+	<script src='js/jquery-1.11.1.min.js'></script>
+
+	<script src='js/jquery.easing-1.3.js'></script>
+	<script src='js/jquery.mousewheel.min.js'></script>
+
+	<!-- FANCYBOX -->
+	<script src='js/jquery.fancybox.pack.js?v=2.1.5'></script>
+	<script src='js/config_fancybox.js'></script>
+
+	<!-- IOS SLIDER -->
+	<script src='js/jquery.iosslider.min.js'></script>
+	<script src='js/config_iosslider.js'></script>
+
+	<!-- customScroll-->
+	<script src='js/jquery.mCustomScrollbar.js'></script>
+
+	<!-- customSelect-->
+	<script src='js/jquery.customSelect.min.js'></script>
+
+	<!-- CHOSEN SELECT -->
+	<script src='js/chosen.jquery.js'></script>
+	<script src='js/config_chosen.js'></script>
+
+	<!-- nouislider range slider -->
+	<script src='js/wNumb.js'></script>
+	<script src='js/nouislider.min.js'></script>
+	<script src='js/config_bodycalc.js'></script>
+
+</head>
+<body>
+
+	<!-- FANCYBOX POPUP CONTENT -->
+	<div class='fancybox'>
+		<div id='popup_map' class='map-popup'>
+			<i class='fancybox__close'></i>
+			<div id='dealer_map' style='width: 860px; height: 730px;'></div>
+			<div style='position: absolute; top: 0; left: 0; z-index: 5;'>
+				<mark style='display: inline-block; padding: 4px; margin-bottom: 10px;'>иконка геолокации</mark>
+				<br/>
+				<span style="display: inline-block; width: 15px; height: 15px; background-image: url('img/geolocation-marker.png'); background-size: 15px auto; "></span>
+				<br/>
+				<br/>
+				<mark style='display: inline-block; padding: 4px; margin-bottom: 10px;'>иконка ближайшего центра от местоположения</mark>
+				<br/>
+				<span style="display: inline-block; width: 54px; height: 82px; background-image: url('img/map-marker-x2.png'); background-size: 54px 82px; "></span>
+			</div>
+		</div>
+	</div>
+
+	<!-- /FANCYBOX POPUP CONTENT -->
+
+	<main class='page-main calc' id='main_wrapper'>
+		<article class='page-main__content'>
+			<div class='page-main__wrapper page-main__wrapper--calc'>
+				<div class='page-main__container'>
+					<div class='calc__header'>
+						<div class='calc__title'>
+							<div class='calc__headline' id='auto-part'>Выберите необходимые детали</div>
+							<div class='calc__headline calc__headline--small'>Кликните на часть автомобиля</div>
+							<div class='calc__to-list'>
+								<a class='btn btn--to-list btn--gray' href='list.html'><span>Другая модель</span></a>
+							</div>
+						</div>
+						<div class='calc__auto'>
+							<figure class='auto-box'>
+								<img src='img/bodycalc/octavia-a5.png' alt=''>
+								<object data='img/bc_new/octavia.svg' type='image/svg+xml' id='imap' class='auto-box__svg'>
+									<p>К сожалению, вы используете устаревшую версию браузера, которая не поддерживает интерактивную карту.</p>
+								</object>
+								<figcaption></figcaption>
+							</figure>
+							<div class='calc__svg-popup svg'>
+								<div class='svg_choice svg_door svg_door--l svg_door--front'>
+									<label><input type='radio' id='svg_door_l_front' class='svg__radio' name='svg_door_l_front_choice'>Дверь левая передняя</label>
+									<label><input type='radio' id='svg_window_l_front' class='svg__radio' name='svg_door_l_front_choice'>Окно левое переднее</label>
+								</div>
+								<div class='svg_choice svg_door svg_door--l svg_door--back'>
+									<label><input type='radio' id='svg_door_l_back' class='svg__radio' name='svg_door_l_back_choice'>Дверь левая задняя</label>
+									<label><input type='radio' id='svg_window_l_back' class='svg__radio primitive' name='svg_door_l_back_choice'>Окно левое заднее</label>
+								</div>
+								<div class='svg_choice svg_door svg_door--r svg_door--front'>
+									<label><input type='radio' id='svg_door_r_front' class='svg__radio' name='svg_door_l_front_choice'>Дверь правая передняя</label>
+									<label><input type='radio' id='svg_window_r_front' class='svg__radio' name='svg_door_l_front_choice'>Окно правое переднее</label>
+								</div>
+								<div class='svg_choice svg_door--r svg_door--back'>
+									<label><input type='radio' id='svg_door_r_back' class='svg__radio' name='svg_door_l_back_choice'>Дверь правая задняя</label>
+									<label><input type='radio' id='svg_window_r_back' class='svg__radio' name='svg_door_l_back_choice'>Окно правое заднее</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='calc__content'>
+						<form action='#' method='post'>
+							<div class='calc__info'>
+								<div class='calc__damage damage damage--area'>
+									<!-- <div class='damage__desc'> -->
+									<div class='damage__head'>
+										<div class='damage__headline calc__headline svg_windshield'>Лобовое стекло</div>
+										<div class='damage__headline calc__headline svg_bumper_front'>Бампер передний</div>
+										<div class='damage__headline calc__headline svg_hood'>Капот</div>
+										<div class='damage__headline calc__headline svg_fender_l_front'>Крыло левое переднее</div>
+										<div class='damage__headline calc__headline svg_top svg_top1'>Крыша</div>
+										<div class='damage__headline calc__headline svg_mirror_l'>Зеркало левое</div>
+					<!--ПРИМЕР ДЛЯ ВЫБОРА ОКНО/ДВЕРЬ-->
+										<div class='damage__headline calc__headline svg_door_l_front svg__show'>Дверь передняя левая</div>
+										<div class='damage__headline calc__headline svg_window_l_front'>Окно переднее левое</div>
+										<div class='damage__headline calc__headline svg_door_l_back'>Дверь задняя левая</div>
+										<div class='damage__headline calc__headline svg_window_l_back'>Окно заднее левое</div>
+										<div class='damage__headline calc__headline svg_fender_l_back'>Крыло левое заднее</div>
+										<div class='damage__headline calc__headline svg_boot'>Крышка багажника</div>
+										<div class='damage__headline calc__headline svg_bumper_back'>Бампер задний</div>
+										<div class='damage__headline calc__headline svg_window_rear'>Стекло заднее</div>
+										<div class='damage__headline calc__headline svg_fender_r_back'>Крыло правое заднее</div>
+										<div class='damage__headline calc__headline svg_door_r_back'>Дверь задняя правая</div>
+										<div class='damage__headline calc__headline svg_window_r_back'>Окно заднее правое</div>
+										<div class='damage__headline calc__headline svg_mirror_r'>Зеркало правое</div>
+										<div class='damage__headline calc__headline svg_door_r_front'>Дверь передняя правая</div>
+										<div class='damage__headline calc__headline svg_window_r_front'>Окно переднее правое</div>
+										<div class='damage__headline calc__headline svg_fender_r_front'>Крыло переднее правое</div>
+										<div class='damage__headline calc__headline svg_disk1 svg_disk2 svg_disk3 svg_disk4'>Диск</div>
+									</div>
+									<div class='damage__img'>
+									</div>
+									<div class='damage__desc'>
+										<div class='damage__instr'>Установите степень повреждения детали,<br> двигая "ползунок"
+										</div>
+										<div class='js_nouislider nouislider' data-range='damage'>
+											<div class='damage__slider' id='damageSlider'>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='damage damage--more'>
+									<div class='damage__item damage__item--1'>
+										<div class='damage__name'>Потертости по лаку</div>
+										<div class='damage__full'>Супер-мелкие повреждения, зачем вам в ремонт?
+										</div>
+									</div>
+									<div class='damage__item damage__item--2 damage__show'>
+										<div class='damage__name'>Потертости по лаку</div>
+										<div class='damage__full'>Царапины ЛКП, притертости, сколы, незначительные деформации,повреждения менее 10% площади детали
+										</div>
+									</div>
+									<div class='damage__item damage__item--3'>
+										<div class='damage__name'>Повреждения до 10% площади</div>
+										<div class='damage__full'>Тут уже посильнее задело, кажись
+										</div>
+									</div>
+									<div class='damage__item damage__item--4'>
+										<div class='damage__name'>Повреждения до 10% площади</div>
+										<div class='damage__full'>Ездить можно
+										</div>
+									</div>
+									<div class='damage__item damage__item--5'>
+										<div class='damage__name'>Повреждения до 30% площади</div>
+										<div class='damage__full'>Да нормально пока что
+										</div>
+									</div>
+									<div class='damage__item damage__item--6'>
+										<div class='damage__name'>Повреждения до 30% площади</div>
+										<div class='damage__full'>Что-то не очень ваше авто выглядит
+										</div>
+									</div>
+									<div class='damage__item damage__item--7'>
+										<div class='damage__name'>Значительные повреждения — <span>Замена</span></div>
+										<div class='damage__full'>Повреждение более 50% площади детали, повреждение ребер жесткости, каркаса или внутренних усилителей детали
+										</div>
+									</div>
+									<div class='damage__item damage__item--8'>
+										<div class='damage__name'>Требуется замена</div>
+										<div class='damage__full'>Как вам вообще не стыдно на такой машине разъезжать?!
+										</div>
+									</div>
+									<div class='damage__item damage__item--prim1'>
+										<div class='damage__name'>Ремонт</div>
+										<div class='damage__full'>Повреждение более 30% площади детали, повреждение ребер жесткости, каркаса или внутренних усилителей детали
+										</div>
+									</div>
+									<div class='damage__item damage__item--prim2'>
+										<div class='damage__name'>Замена</div>
+										<div class='damage__full'>Как вам вообще не стыдно на такой машине разъезжать?!
+										</div>
+									</div>
+								</div>
+								<div class='calc__calc calculation'>
+									<div class='calculation__article calculation__article--prices'>
+										<div class='calculation__headline calc__headline'>Расчет стоимости</div>
+										<div class='calculation__item calculation__item--parts'>
+											<a class='calculation__open calculation__open--open' id='open-parts'>
+												<span class='calculation__btn' id='btn-parts'></span>
+												<b>Стоимость запасных частей</b>
+												<b class='calculation__price'>25 351 руб.</b>
+											</a>
+											<div class='calculation__content calculation__show' id='parts-content'>
+												<div class='calculation__point calculation__point--parts'>
+													<div class='calculation__option'>
+														<label class='calculation__disabled'>
+															<input class='form__checkbox form__checkbox--calc' type='checkbox' checked disabled>
+															Корпус двери
+															<span></span>
+														</label>
+														<span class='calculation__price'>21 985 руб.</span>
+													</div>
+													<div class='calculation__suboption'>
+														<label>
+															<input class='form__radio' type='radio' name='door' checked>
+															Окрашенный
+															<span></span>
+														</label>
+														<span class='calculation__price'>21 985 руб.</span>
+													</div>
+													<div class='calculation__suboption'>
+														<label>
+															<input class='form__radio' type='radio' name='door'>
+															Под окрас
+															<span></span>
+														</label>
+														<span class='calculation__price'>18 325 руб.</span>
+													</div>
+												</div>
+												<div class='calculation__point calculation__point--parts'>
+													<div class='calculation__option'>
+														<label>
+															<input class='form__checkbox form__checkbox--calc' type='checkbox' checked>
+															 Ручка
+															 <span></span>
+														</label>
+														<span class='calculation__price'>3 366 руб.</span>
+													</div>
+													<div class='calculation__suboption'>
+														<label>
+															<input class='form__radio' type='radio' name='handle'>
+															Окрашенный
+															<span></span>
+														</label>
+														<span class='calculation__price'>5 589 руб.</span>
+													</div>
+													<div class='calculation__suboption'>
+														<label>
+															<input class='form__radio' type='radio' name='handle' checked>
+															Под окрас
+															<span></span>
+														</label>
+														<span class='calculation__price'>3 366 руб.</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class='calculation__item calculation__item--labors'>
+											<a class='calculation__open calculation__open--open' id='open-labors'>
+												<span class='calculation__btn' id='btn-labors'></span>
+												<b>Стоимость комплекса работ</b>
+												<b class='calculation__price'>10 592 руб.</b>
+											</a>
+											<div class='calculation__content calculation__show calculation__content--labors' id='labors-content'>
+												<div class='calculation__point'>
+													<div class='calculation__option calculation__option--labors'>
+														<span>Снятие/установка</span>
+														<span class='calculation__price'>3 036 руб.</span>
+													</div>
+												</div>
+												<div class='calculation__point'>
+													<div class='calculation__option calculation__option--labors'>
+														<span>Окрас</span>
+														<span class='calculation__price'>7 556 руб.</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class='calculation__item calculation__item--total-prices'>
+											<b>Итого:</b>
+											<b class='calculation__price'>35 943 руб.</b>
+										</div>
+										<button class='btn btn--calculation btn--green'>Добавить к расчету</button>
+									</div>
+									<div class='calculation__article calculation__article--total'>
+										<div class='calculation__headline calc__headline'>Итоговая смета</div>
+										<button class='btn btn--reset btn--gray'>Сбросить все</button>
+										<div class='calculation__item calculation__item--total-hover'>
+											<div class='calculation__content calculation__content--total calculation__show'>
+												<b>Ксеоновая фара левая</b>
+												<span> — Замена</span>
+												<b class='calculation__price'>14 248 руб.</b>
+											</div>
+											<div class='calculation__content calculation__content--hover'>
+												<a class='calculation__act calculation__act--delete'>Удалить деталь</a>
+												<a class='calculation__act calculation__act--change'>Изменить вид ремонта</a>
+											</div>
+										</div>
+										<div class='calculation__item'>
+											<b>Итого:</b>
+											<b class='calculation__price'>14 248 руб.</b>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class='calc__form'>
+								<div class='client-form'>
+									<div class='client-form__title'>Оформление заявки</div>
+									<div class='client-form__row'>
+										<span class='client-form__star'>*</span>
+										Поле обязательное для заполнения
+									</div>
+									<div class='client-form__row'>
+										<label class='client-form__required'>
+											Имя
+											<input type='text'/>
+										</label>
+									</div>
+									<div class='client-form__row'>
+										<label class='client-form__required'>
+											Фамилия
+											<input type='text'/>
+										</label>
+									</div>
+									<div class='client-form__row'>
+										<label class='client-form__required'>
+											Телефон
+											<input type='tel'/>
+										</label>
+									</div>
+									<div class='client-form__row'>
+										<label>
+											E-mail
+											<input type='text'/>
+										</label>
+									</div>
+									<div class='client-form__row'>
+										<label class='client-form__required'>
+											Город
+										</label>
+										<select>
+											<option value=''>не выбрано</option>
+											<option>Москва</option>
+											<option>Санкт-Петербург</option>
+											<option>Сыктывкар</option>
+											<option>Петропавловск-Камчатский</option>
+										</select>
+									</div>
+									<div class='client-form__row'>
+										<label>
+											Дилер
+										</label>
+										<select class='client-form__select'>
+											<option value=''>не выбрано</option>
+											<option value=''>Genser</option>
+											<option value=''>Авто Ганза</option>
+											<option value=''>Авторусь</option>
+										</select>
+										<a class='btn btn--green btn--map js_fancybox_noclose' href='#popup_map'>
+											<i class='btn__ico-location'></i>
+											На карте
+										</a>
+									</div>
+									<div class='client-form__row'>
+										<label class='client-form__agree'>
+											<input type='checkbox' name='form_checkbox_IS_RULES_AGREED[]' value='25' id='25'>
+											Я согласен на <a href='http://www.skoda-avto.ru/about/pages/rules.aspx' target='_blank'>использование
+											моих персональных данных.</a> *
+										</label>
+										<p>
+											Нажимая «Отправить», я выражаю своё согласие на обработку моих персональных данных, указанных в настоящей заявке, в целях рассмотрения возможности выдачи мне ООО "Фольксваген Банк РУС" кредита на приобретение автотранспортного средства. Настоящее согласие даётся мной в отношении обработки вышеуказанных персональных данных Обществом с ограниченной ответственностью "Фольксваген Банк РУС", а также юридическим лицом, указанным в разделе "Дилер" заявки.
+										</p>
+									</div>
+									<div class='client-form__row clearfix'>
+										<input class='btn btn--send btn--green' type='submit' value='Отправить'/>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</article>
+	</main>
+	<script src='js/main.js'></script>
+	<!-- yandex maps -->
+	<script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
+	<script src='js/config_map.js'></script>
+	<script src='js/layout.js'></script>
+</body>
+</html>
