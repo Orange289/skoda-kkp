@@ -4356,7 +4356,7 @@ select {
   position: relative;
   z-index: 1200;
   margin: 0 auto; }
-  .page-main__wrapper--calc {
+  .page-main__wrapper--calc, .page-main__wrapper--list {
     width: 900px; }
 
 .page-main__container {
@@ -4544,7 +4544,7 @@ select {
 .models__item {
   position: relative;
   float: left;
-  width: 289px;
+  width: 33%;
   height: 250px;
   padding: 0 10px;
   margin-bottom: 5px;
