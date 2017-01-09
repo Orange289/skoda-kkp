@@ -88,8 +88,13 @@
 	}
 
 	&--small {
-		width: 62px !important;
-		margin-left: 5px !important;
+		width: 58px !important;
+		margin-left: 4px !important;
+
+		.icon {
+			top: 15px;
+		}
+
 	}
 
 }
@@ -101,19 +106,19 @@
 
 	.form__icon {
 		position: absolute;
-		top: 11px;
+		top: 12px;
 		cursor: pointer;
 
 		&--from {
 			@include size(14px, 16px);
 			fill: #5caf32;
-			left: 130px;
+			left: 113px;
 		}
 
 		&--to {
 			@include size(14px, 16px);
 			fill: #5caf32;
-			left: 300px;
+			left: 266px;
 		}
 
 	}

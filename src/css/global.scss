@@ -169,6 +169,10 @@ select {
 	display: none !important;
 }
 
+.is_hidden {
+	visibility: hidden;
+}
+
 //chosen
 
 .chosen-container-single .chosen-single {
@@ -182,7 +186,8 @@ select {
 	padding-top: 12px !important;
 	padding-bottom: 26px !important;
 	padding-left: 13px;
-	margin-top: -3px !important;
+	padding-right: 27px !important;
+	margin-top: -4px !important;
 }
 
 .select_wrap {
@@ -191,8 +196,8 @@ select {
     .icon {
         position: absolute;
         z-index: 1;
-        right: 11px;
-        top: 14px;
+        right: 8px;
+        top: 13px;
     }
 
 }

@@ -10,7 +10,7 @@
 .parts__filters-item {
 	@include font-param(14px, 32px, 400);
 	padding-left: 30px;
-	margin-right: 28px;
+	margin-right: 39px;
 	cursor: pointer;
 	position: relative;
 
@@ -23,7 +23,7 @@
 .parts__col {
 
 	&--1 {
-		width: 234px;
+		width: 238px;
 	}
 
 	&--2 {

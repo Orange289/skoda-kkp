@@ -6,7 +6,7 @@
 	&--5,
 	&--8,
 	&--9 {
-		width: 196px;
+		width: 198px;
 	}
 
 	&--4 {
@@ -22,11 +22,24 @@
 	}
 
 	&--11 {
-		width: 256px;
+		width: 258px;
 	}
 
 	&--12 {
-		width: 334px;
+		width: 332px;
+	}
+
+}
+
+.discounts__icon {
+	top: 9px;
+
+	&--edit {
+		left: 3px;
+	}
+
+	&--basket {
+		left: 27px;
 	}
 
 }

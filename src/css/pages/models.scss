@@ -7,7 +7,7 @@
 	padding: 0;
 	margin: 0;
 	@include clearfix();
-} //bodycalc_model_list
+}
 
 .models__item {
 	position: relative;
@@ -18,11 +18,11 @@
 	margin-bottom: 5px;
 	text-align: center;
 	box-sizing: border-box;
-} //bodycalc_model_item
+}
 
 .models__item-wrapper {
 	height: 100%;
-} // bodycalc_model_wrapper
+}
 
 .models__block {
 	cursor: pointer;
@@ -32,7 +32,7 @@
 	border: 1px solid transparent;
 	transition: .3s border, background ease;
 	box-sizing: border-box;
-} //bodycalc_model_block
+}
 
 .models__item-wrapper:hover .models__block {
 	border: 1px solid #000;
@@ -110,10 +110,10 @@
 }
 
 .models__list-select {
+	display: block;
 	position: relative;
 	padding: 10px;
 	cursor: pointer;
-	/*border-bottom: 1px solid #f7f7f7;*/
 	height: 30px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
