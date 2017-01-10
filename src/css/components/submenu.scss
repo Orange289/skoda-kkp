@@ -1,0 +1,17 @@
+.submenu {
+	@include font-param(14px, 32px, 400, #2b2b2b);
+	@include clearfix();
+	position: absolute;
+	z-index: 3000;
+  display: none;
+  width: 100%;
+  top: 71px;
+  background: #ffffff;
+  border-bottom: 1px solid #dddddd;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.submenu__wrapper {
+	width: 940px;
+	margin: 0 auto;
+}

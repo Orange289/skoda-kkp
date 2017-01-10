@@ -41,7 +41,7 @@ var path = {
 		fonts: 'src/fonts/**/*.*'
 	},
 	watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
-		html: 'src/**/*.html',
+		html: 'src/*.html',
 		js: 'src/js/**/*.js',
 		sass: 'src/css/**/*.scss',
 		sassEntry: 'src/css/base.scss',

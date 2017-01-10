@@ -2,7 +2,6 @@
 
 .admin {
 	padding-top: 0px;
-	padding-bottom: 236px;
 }
 
 .admin__wrapper {
@@ -25,12 +24,11 @@
 .admin__pagination {
 	float: left;
 	min-width: 75px;
-	padding-top: 33px;
 }
 
 .admin__howmuch {
 	@include font-param(13px, 32px, 400);
-	padding-top: 27px;
+	margin-top: -6px;
 	float: right;
 
 	span {
@@ -41,7 +39,6 @@
 }
 
 .admin__filters {
-	padding-top: 27px;
 	padding-bottom: 28px;
 }
 
@@ -53,6 +50,7 @@
 .admin__table {
 	@include font-param(14px, 32px, 400, #000000);
 	border-bottom: 1px solid #dddddd;
+	margin-bottom: 33px;
 
  	table {
  		border-collapse: collapse;
@@ -85,7 +83,6 @@
 
 .admin__edit-block {
 	position: relative;
-	margin-top: 30px;
 	margin-bottom: 43px;
 	@include font-param(14px, 32px, 400);
 

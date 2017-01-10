@@ -1,0 +1,29 @@
+.hamburger {
+	@include clearfix();
+	float: right;
+	height: 70px;
+	width: 70px;
+	padding: 18px 15px 12px 15px;
+	box-sizing: border-box;
+	visibility: hidden;
+	background: none;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	z-index: 2;
+
+	&:focus {
+		outline: none;
+	}
+
+}
+
+.hamburger__dot {
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	border-radius: 4px;
+	background-color: #4ba82e;
+	text-align: justify;
+	transition: background-color .3s ease;
+}

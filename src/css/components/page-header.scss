@@ -113,6 +113,8 @@
 		position: absolute;
 		top: 32px;
 		left: 199px;
+		transform: translateZ(0);
+		transition: transform .3s;
 	}
 
 }

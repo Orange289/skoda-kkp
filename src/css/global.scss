@@ -40,6 +40,8 @@ body {
 	color: #000000;
 	font-weight: 400;
 	background-color: #ffffff;
+	position: relative;
+	min-width: 1250px;
 }
 
 a {
@@ -198,6 +200,8 @@ select {
         z-index: 1;
         right: 8px;
         top: 13px;
+				transform: translateZ(0);
+				transition: transform .3s;
     }
 
 }

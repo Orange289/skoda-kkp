@@ -2,6 +2,87 @@ $(document).ready(function(){
 
 	svg4everybody({});
 
+//burger and submenu
+
+	function hideHeaderSubmenus(anchorItem) {
+	    if (anchorItem) {
+	        anchorItem.removeClass('active');
+	        $('.' + anchorItem.data('toggletarget')).slideUp(300);
+	    } else {
+					$('.js_toggle_submenu').removeClass('active');
+	        $('.js_header_submenu').slideUp(300);
+	    }
+	}
+	function showHeaderSubmenu(anchorItem) {
+	    var target = $('.' + anchorItem.data('toggletarget'));
+	    var headerPos = $('.page-header').position().top + 71;
+	    anchorItem.addClass('active');
+
+	    if (target.parents('.page-header').length == 0) {
+	        target.offset({ top: headerPos });
+	    }
+
+	    target.slideDown(300);
+	}
+
+	$(document).on('click', '.js_toggle_submenu', function (e) {
+	    var $this = $(this);
+
+	    if ($this.hasClass('active')) {
+	        hideHeaderSubmenus();
+	    } else {
+	        hideHeaderSubmenus();
+	        showHeaderSubmenu($this);
+	    }
+
+	    e.preventDefault();
+	});
+
+	var hamburger = $('#js_hamburger');
+	var headerNav = $('#js_header-nav');
+	var headerNavSub = $('#js_header-nav-sub');
+	var headerNavItems = headerNav.find('.page-header__link');
+	var headerNavSubItems = headerNavSub.find('.page-header__link');
+
+	function renderHeaderNav() {
+	    headerNavItems.each(function () {
+	        if ($(this).offset().left + $(this).width() + 50 > hamburger.offset().left) {
+	            $(this).addClass('is_hidden');
+	            headerNavSubItems.eq($(this).index()).show();
+	        } else {
+	            $(this).removeClass('is_hidden');
+	            headerNavSubItems.eq($(this).index()).hide();
+	        }
+	    });
+	}
+	function renderBurger() {
+	    if (headerNavItems.filter('.is_hidden').length == 0) {
+	        hamburger.css({ 'visibility': 'hidden' });
+	        hideHeaderSubmenus(hamburger);
+	    } else {
+	        hamburger.css({ 'visibility': 'visible' });
+	    }
+	}
+
+	$(window).on('resize', function () {
+	    renderHeaderNav();
+	    renderBurger();
+	});
+	$(function () {
+	    renderHeaderNav();
+	    renderBurger();
+	});
+
+// 	$(document).on('click', '.js_link_open', function () {
+//     var url = $(this).attr('data-url');
+//     window.location.href = url;
+// });
+//
+// $(document).on('click', '.js_link_open_stop', function (e) {
+//     e.stopPropagation();
+// });
+
+
 //main slider init
 	if(  $('.js_slick_slider').length>0) {
 		$('.js_slick_slider').slick({
@@ -534,7 +615,7 @@ datePicker();
 		$(".admin__add-exception").css('display','block');
 	})
 
-	$(".admin__icon--edit").on("click", function(){
+	$(".icon_edit_input").on("click", function(){
 		$(this).css('display','none');
 		$(".btn--edit-block").css('display','inline-block');
 		$(this).parents('.admin__edit-block').find('.form__input').removeAttr('disabled');

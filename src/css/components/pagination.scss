@@ -1,21 +1,15 @@
-.pagination {
+.pagination__item {
+	display: inline-block;
+	cursor: pointer;
+	@include font-param(13px, 32px, 700, #848b8d);
+	@include size(30px);
+	cursor: pointer;
+	text-align: center;
 
-	label {
-		display: inline-block;
-		@include font-param(13px, 32px, 700, #848b8d);
-		@include size(30px);
-		cursor: pointer;
-		text-align: center;
+	&--active {
+		color: #000000;
+		background-color: #dddddd;
+		border-radius: 50%;
 	}
 
-}
-
-.pagination__item {
-	display: none;
-}
-
-.pagination__item:checked + label {
-	color: #000000;
-	background-color: #dddddd;
-	border-radius: 50%;
 }
