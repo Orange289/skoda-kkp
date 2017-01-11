@@ -13,8 +13,30 @@
 	li {
 		display: inline-block;
 		margin-right: 18px;
+		position: relative;
 
-		&:last-child .mini-arrow{
+		&::before {
+			content: '';
+			position: absolute;
+			top: 15px;
+			right: -14px;
+			width: 7px;
+			border-top: 1px solid #cdcdcd;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 13px;
+			right: -14px;
+			@include size(4px, 4px);
+			border-bottom: 1px solid #cdcdcd;
+			border-right: 1px solid #cdcdcd;
+			transform: rotate(-45deg);
+		}
+
+		&:last-child::before,
+		&:last-child::after {
 			display: none;
 		}
 

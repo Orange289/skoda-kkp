@@ -3,13 +3,15 @@
 	@include clearfix();
 	border-bottom: 1px solid #dddddd;
 	min-height: 69px;
-	width: 100%;
-	min-width: 1216px;
+	// width: 100%;
+	// min-width: 940px;
 
 	ul {
 		list-style: none;
 		padding: 0;
 		margin: 0;
+		position: absolute;
+		white-space: nowrap;
 	}
 
 }
@@ -28,7 +30,7 @@
 
 .page-header__nav {
 	float: left;
-	min-width: 690px;
+	min-width: 390px;
 	margin-left: 48px;
 
 
@@ -181,6 +183,25 @@
 			color: #4ba82e;
 		}
 
+	}
+
+}
+
+.page-header__submenu {
+	@include font-param(14px, 32px, 400, #2b2b2b);
+	@include clearfix();
+	position: absolute;
+	z-index: 3000;
+	display: none;
+	width: 100%;
+	top: 71px;
+	background: #ffffff;
+	border-bottom: 1px solid #dddddd;
+	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+
+	&-wrapper {
+		width: 940px;
+		margin: 0 auto;
 	}
 
 }

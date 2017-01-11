@@ -11,6 +11,7 @@ $('body').append('<div class="kdx-nav" >' +
 								'<a href="pricing.html">наценка</a>' +
 								'<a href="hours.html">стоимость н/ч</a>' +
 								'<a href="supplements.html">расходники</a>' +
+								'<a href="profile.html">профиль</a>' +
         '</div>' +
     '</div>');
 
