@@ -2588,7 +2588,7 @@ body {
   font-weight: 400;
   background-color: #ffffff;
   position: relative;
-  min-width: 1250px; }
+  min-width: 900px; }
 
 a {
   text-decoration: none; }
@@ -3098,7 +3098,9 @@ select {
     color: #f0f0f0; }
 
 .admin {
-  padding-top: 0px; }
+  padding-top: 0px;
+  padding-left: 20px;
+  padding-right: 20px; }
 
 .admin__wrapper {
   width: 1180px; }

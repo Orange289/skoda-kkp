@@ -35,7 +35,7 @@
 			<img src='img/img-logo.png' width='137' height='30' alt='logo'>
 		</div>
 		<nav class='page-header__nav'>
-			<ul>
+			<ul id='js_header-nav'>
 				<li class='page-header__link'><a href='requests.html'>Заявки</a></li>
 				<li class='page-header__link'><a href='parts.html'>Запчасти</a></li>
 				<li class='page-header__link'><a href='discounts.html'>Скидки</a></li>
@@ -65,6 +65,28 @@
 					<li class='page-header__dealer-item'>ООО Алем Авто ЛТД</li>
 					<li class='page-header__dealer-item'>Европа Авто</li>
 				</ul>
+			</div>
+		</div>
+		<button class='hamburger hamburger--squeeze js_toggle_submenu' type='button' data-toggleTarget='js_site_nav' id='js_hamburger'>
+			<span class='hamburger__dot'></span>
+			<span class='hamburger__dot'></span>
+			<span class='hamburger__dot'></span>
+		</button>
+		<div class='page-header__submenu js_header_submenu js_site_nav'>
+			<div class='page-header__submenu-wrapper'>
+				<div class='submenu'>
+					<nav class='page-header__nav'>
+						<ul id='js_header-nav-sub'>
+							<li class='page-header__link'><a href='requests.html'>Заявки</a></li>
+							<li class='page-header__link'><a href='parts.html'>Запчасти</a></li>
+							<li class='page-header__link'><a href='discounts.html'>Скидки</a></li>
+							<li class='page-header__link'><a href='pricing.html'>Наценка</a></li>
+							<li class='page-header__link'><a href='hours.html'>Стоимость н/ч</a></li>
+							<li class='page-header__link page-header__link--active'><a>Расходники</a></li>
+							<li class='page-header__link'><a href='#'>Демо-калькулятор</a></li>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</div>
 	</header>
