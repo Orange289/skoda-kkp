@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class='no-js' lang='ru'>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Skoda</title>
+	<meta name='description' content=''>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/>
+	<link rel='icon' href='/favicon.png' type='image/png'/>
+	<link rel='apple-touch-icon-precomposed' href='/apple-touch-icon-precomposed.png'/>
+
+	<link rel='stylesheet' href='css/style.css'>
+
+	<script src='js/svg4everybody.min.js'></script>
+
+	<script src='js/jquery-1.11.1.min.js'></script>
+
+	<script src='js/jquery-ui.min.js'></script>
+
+	<script src='js/modernizr-2.8.3-respond-1.1.0.min.js'></script>
+
+	<script src='js/jquery.easing-1.3.js'></script>
+
+	<script src='js/jquery.mousewheel.min.js'></script>
+
+	<script src='js/chosen.jquery.js'></script>
+
+	<script src='js/libs.js'></script>
+
+</head>
+<body>
+	<header class='page-header'>
+		<div class='page-header__logo'>
+			<img src='img/img-logo.png' width='137' height='30' alt='logo'>
+		</div>
+		<nav class='page-header__nav'>
+			<ul id='js_header-nav'>
+				<li class='page-header__link page-header__link--imp'><a href='imp-requests.html'>Заявки</a></li>
+				<li class='page-header__link page-header__link--imp page-header__link--active'><a>Дилеры</a></li>
+				<li class='page-header__link page-header__link--imp'><a href='logs.html'>История</a></li>
+			</ul>
+		</nav>
+		<div class='page-header__user'>
+			<a class='page-header__login' href='imp-profile.html'>
+				<svg class='page-header__icon-login'>
+					<use xlink:href='img/sprite.svg#icon_profile'></use>
+				</svg>
+			</a>
+		</div>
+	</header>
+	<main class='page-main dealers admin'>
+		<div class='page-main__wrapper admin__wrapper'>
+			<div class='breadcrumbs'>
+				<ul>
+					<li><a href='#'>Главная</a></li>
+					<li><a href='#'>Дилеры</a></li>
+				</ul>
+			</div>
+			<div class='admin__head dealers__head dealers__head--imp'>
+				<h1 class='admin__title dealers__title'>Дилеры</h1>
+				<a class='admin__export' href='#'>Экспорт списка в XLS</a>
+			</div>
+			<div class='admin__table dealers__table'>
+				<table class='admin__table-head dealers__table-head'>
+					<tr>
+						<td class='dealers__col dealers__col--1'>Название</td>
+						<td class='dealers__col dealers__col--2'>Дилерский номер</td>
+						<td class='dealers__col dealers__col--3'>Город</td>
+						<td class='dealers__col dealers__col--4'>Менеджер</td>
+					</tr>
+				</table>
+				<div class='admin__table-content dealers__table-content dealers__table-content--full'>
+					<table>
+						<tr>
+							<td class='dealers__col dealers__col--1'>Геленджик Авто</td>
+							<td class='dealers__col dealers__col--2'>90220</td>
+							<td class='dealers__col dealers__col--3'>Геленджик</td>
+							<td class='dealers__col dealers__col--4'>Сухарев Олег</td>
+						</tr>
+						<tr><td>Европа Авто</td><td>93000</td><td>Калининград</td><td>Константин Константинопольский</td></tr>
+						<tr><td>ООО Константинополь</td><td>89033</td><td>Москва</td><td>Васильев Антон</td></tr>
+						<tr><td>ООО Алем Авто ЛТД</td><td>77023</td><td>Геленджик</td><td>Бондарчук Елена</td></tr>
+						<tr><td>Блейн Центр Красноярск</td><td>32300</td><td>Красноярск</td><td>Константин Константинопольский</td></tr>
+					</table>
+				</div>
+			</div>
+			<div class='admin__pagination pagination'>
+				<a class='pagination__item pagination__item--active' href='#' id='page_1'>1</a>
+				<a class='pagination__item' href='#' id='page_2'>2</a>
+				<a class='pagination__item' href='#' id='page_3'>3</a>
+			</div>
+			<div class='admin__howmuch howmuch'>
+				<span>Элементов на странице</span>
+				<div class='form__select form__select--small select_wrap'>
+					<select class='js_chosen_select' name='howmuch'>
+						<option value='5'>5</option>
+						<option value='10'>10</option>
+						<option value='20'>20</option>
+						<option value='30'>30</option>
+					</select>
+					<svg class='icon'
+						 xmlns='http://www.w3.org/2000/svg'
+						 xmlns:xlink='http://www.w3.org/1999/xlink'
+						 width='15.5px' height='7.5px'>
+						<path fill-rule='evenodd'  stroke='rgb(92, 175, 50)' stroke-width='1px' stroke-linecap='butt' stroke-linejoin='miter' fill='none'
+						 d='M1.500,0.500 L7.500,4.500 L13.500,0.500 '/>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src='js/main.js'></script>
+	<script src='js/layout.js'></script>
+</body>

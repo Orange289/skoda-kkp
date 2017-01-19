@@ -627,5 +627,17 @@ datePicker();
 		$(this).parents('.admin__edit-block').find('.form__input').attr('disabled','');
 	})
 
+	$('.tab').on("click", function(){
+		$('.pagination--dealer').css('display', 'block');
+		$('.howmuch--dealer').css('display', 'block');
+	})
+
+	$('.dealer__tab').on("click", function(){
+		$('.pagination--dealer').css('display', 'none');
+		$('.howmuch--dealer').css('display', 'none');
+	})
+
+
+
 
 })

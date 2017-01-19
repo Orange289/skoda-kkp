@@ -1,0 +1,15 @@
+.dealers__head {
+	border-bottom: none;
+	padding-bottom: 23px;
+}
+
+
+.dealers__col {
+
+	&--1,
+	&--2,
+	&--3 {
+		width: 298px;
+	}
+
+}

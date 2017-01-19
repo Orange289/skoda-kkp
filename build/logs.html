@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class='no-js' lang='ru'>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Skoda</title>
+	<meta name='description' content=''>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/>
+	<link rel='icon' href='/favicon.png' type='image/png'/>
+	<link rel='apple-touch-icon-precomposed' href='/apple-touch-icon-precomposed.png'/>
+
+	<link rel='stylesheet' href='css/style.css'>
+
+	<script src='js/svg4everybody.min.js'></script>
+
+	<script src='js/jquery-1.11.1.min.js'></script>
+
+	<script src='js/jquery-ui.min.js'></script>
+
+	<script src='js/modernizr-2.8.3-respond-1.1.0.min.js'></script>
+
+	<script src='js/jquery.easing-1.3.js'></script>
+
+	<script src='js/jquery.mousewheel.min.js'></script>
+
+	<script src='js/chosen.jquery.js'></script>
+
+	<script src='js/libs.js'></script>
+
+</head>
+<body>
+	<header class='page-header'>
+		<div class='page-header__logo'>
+			<img src='img/img-logo.png' width='137' height='30' alt='logo'>
+		</div>
+		<nav class='page-header__nav'>
+			<ul id='js_header-nav'>
+				<li class='page-header__link page-header__link--imp'><a href='imp-requests.html'>Заявки</a></li>
+				<li class='page-header__link page-header__link--imp'><a href='dealers.html'>Дилеры</a></li>
+				<li class='page-header__link page-header__link--imp page-header__link--active'><a>История</a></li>
+			</ul>
+		</nav>
+		<div class='page-header__user'>
+			<a class='page-header__login' href='imp-profile.html'>
+				<svg class='page-header__icon-login'>
+					<use xlink:href='img/sprite.svg#icon_profile'></use>
+				</svg>
+			</a>
+		</div>
+	</header>
+	<main class='page-main logs admin'>
+		<div class='page-main__wrapper admin__wrapper'>
+			<div class='breadcrumbs'>
+				<ul>
+					<li><a href='#'>Главная</a></li>
+					<li><a href='#'>История изменений</a></li>
+				</ul>
+			</div>
+			<div class='admin__head logs__head logs__head--imp'>
+				<h1 class='admin__title logs__title'>История изменений</h1>
+			</div>
+			<div class='logs__filters'>
+				<div class='form__select form__select--middle select_wrap'>
+					<select class='js_chosen_select' name='models'>
+						<option value=''>Дилер</option>
+						<option value=''>Дилер</option>
+						<option value=''>Дилер</option>
+						<option value=''>Дилер</option>
+						<option value=''>Дилер</option>
+						<option value=''>Дилер</option>
+					</select>
+					<svg class='icon'
+					 xmlns='http://www.w3.org/2000/svg'
+					 xmlns:xlink='http://www.w3.org/1999/xlink'
+					 width='17.5px' height='8.5px'>
+					 <path fill-rule='evenodd'  stroke='rgb(92, 175, 50)' stroke-width='1px' stroke-linecap='butt' stroke-linejoin='miter' fill='none'
+					 d='M1.500,0.500 L8.500,5.500 L15.500,0.500 '/>
+					</svg>
+				</div>
+				<div class='form__datepicker'>
+					<label for='from'>c</label>
+					<div class='form__datepicker-item'>
+						<input class='form__input filters__input filters__input--period js_datepicker js_date_mask' type='text' id='from'>
+						<svg class='form__icon form__icon--from js_datepicker_show'>
+							<use xlink:href='img/sprite.svg#icon_calendar'></use>
+						</svg>
+					</div>
+					<label for='to'>по</label>
+					<div class='form__datepicker-item'>
+						<input class='form__input filters__input filters__input--period js_datepicker js_date_mask' type='text' id='to'>
+						<svg class='form__icon form__icon--to js_datepicker_show'>
+							<use xlink:href='img/sprite.svg#icon_calendar'></use>
+						</svg>
+					</div>
+				</div>
+				<a class='admin__export' href='#'>Экспорт списка в XLS</a>
+			</div>
+			<div class='logs__tabs tabs'>
+				<input type='radio' class='form__radio tab' name='logs' id='tab-first' checked>
+				<label for='tab-first' class='tabs__option'>Запчасти</label>
+				<input type='radio' class='form__radio tab' id='tab-second' name='logs'>
+				<label for='tab-second' class='tabs__option'>Норма часов</label>
+				<div class='tabs__content logs__content' id='tab-content-1'>
+					<div class='admin__table logs__table'>
+						<table class='admin__table-head logs__table-head'>
+							<tr>
+								<td class='logs__col logs__col--1'>Дилер</td>
+								<td class='logs__col logs__col--2'>Менеджер</td>
+								<td class='logs__col logs__col--3'>Дата / Время</td>
+								<td class='logs__col logs__col--4'>Действие</td>
+								<td class='logs__col logs__col--5'>Категория</td>
+								<td class='logs__col logs__col--6'>Деталь</td>
+								<td class='logs__col logs__col--7'>Было</td>
+								<td class='logs__col logs__col--8'>Стало</td>
+							</tr>
+						</table>
+						<div class='admin__table-content logs__table-content'>
+							<table>
+								<tr>
+									<td class='logs__col logs__col--1'>Геленджик Авто</td>
+									<td class='logs__col logs__col--2'>Константинопольский К.</td>
+									<td class='logs__col logs__col--3'>21.12.16 / 14:32</td>
+									<td class='logs__col logs__col--4'>Наценка</td>
+									<td class='logs__col logs__col--5'>Двери</td>
+									<td class='logs__col logs__col--6'>Левая передняя дверь</td>
+									<td class='logs__col logs__col--7'>1.3</td>
+									<td class='logs__col logs__col--8'>0.9</td>
+								</tr>
+								<tr><td>Европа Авто</td><td>Архипов Р.</td><td>19.12.16 / 18:11</td><td>Скидка</td><td>Бампера</td><td>Все</td><td>1</td><td>0.5</td></tr>
+								<tr><td>Константинополь ООО</td><td>Столешников Н.</td><td>21.12.16 / 14:32</td><td>Наценка</td><td>Двери</td><td>Все</td><td>1.3</td><td>0.9</td></tr>
+								<tr><td>ООО Алем Авто</td><td>Сорокин В.</td><td>21.12.16 / 14:32</td><td>Наценка</td><td>Свет</td><td>Ксеноновая фара</td><td>1.3</td><td>0.9</td></tr>
+								<tr><td>Константинополь ООО</td><td>Столешников Н.</td><td>21.12.16 / 14:32</td><td>Скидка</td><td>Двери</td><td>Все</td><td>1.3</td><td>0.9</td></tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class='tabs__content logs__content' id='tab-content-2'>
+					<div class='admin__table logs__table'>
+						<table class='admin__table-head logs__table-head'>
+							<tr>
+								<td class='logs__col logs__col--9'>Дилер</td>
+								<td class='logs__col logs__col--10'>Менеджер</td>
+								<td class='logs__col logs__col--11'>Дата / Время</td>
+								<td class='logs__col logs__col--12'>Действие</td>
+								<td class='logs__col logs__col--13'>Модель</td>
+								<td class='logs__col logs__col--14'>Было</td>
+								<td class='logs__col logs__col--15'>Стало</td>
+							</tr>
+						</table>
+						<div class='admin__table-content logs__table-content'>
+							<table>
+								<tr>
+									<td class='logs__col logs__col--9'>Геленджик Авто</td>
+									<td class='logs__col logs__col--10'>Раскольников В.</td>
+									<td class='logs__col logs__col--11'>21.12.16 / 14:32</td>
+									<td class='logs__col logs__col--12'>Добавление исключения</td>
+									<td class='logs__col logs__col--13'>Octavia A5</td>
+									<td class='logs__col logs__col--14'>1 800 Р</td>
+									<td class='logs__col logs__col--15'>2 200 Р</td>
+								</tr>
+								<tr><td>Европа Авто</td><td>Васильев А.</td><td>19.12.16 / 18:11</td><td>Удаление исключения</td><td>Все</td><td>2 000 Р</td><td>1 900 Р</td></tr>
+								<tr><td>Константинополь ООО</td><td>Пашковская Д.</td><td>21.12.16 / 14:32</td><td>Изменение исключения</td><td>Fabia Combi</td><td>1 800 Р</td><td>2 000 Р</td></tr>
+								<tr><td>Константинополь ООО</td><td>Пашковская Д.</td><td>21.12.16 / 14:32</td><td>Удаление исключения</td><td>Octavia A5 RS</td><td>1 800 Р</td><td>2 000 Р</td></tr>
+								<tr><td>Константинополь ООО</td><td>Пашковская Д.</td><td>21.12.16 / 14:32</td><td>Удаление исключения</td><td>Все</td><td>1 800 Р</td><td>2 000 Р</td></tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='admin__pagination pagination'>
+				<a class='pagination__item pagination__item--active' href='#' id='page_1'>1</a>
+				<a class='pagination__item' href='#' id='page_2'>2</a>
+				<a class='pagination__item' href='#' id='page_3'>3</a>
+			</div>
+			<div class='admin__howmuch howmuch'>
+				<span>Элементов на странице</span>
+				<div class='form__select form__select--small select_wrap'>
+					<select class='js_chosen_select' name='howmuch'>
+						<option value='5'>5</option>
+						<option value='10'>10</option>
+						<option value='20'>20</option>
+						<option value='30'>30</option>
+					</select>
+					<svg class='icon'
+						 xmlns='http://www.w3.org/2000/svg'
+						 xmlns:xlink='http://www.w3.org/1999/xlink'
+						 width='15.5px' height='7.5px'>
+						<path fill-rule='evenodd'  stroke='rgb(92, 175, 50)' stroke-width='1px' stroke-linecap='butt' stroke-linejoin='miter' fill='none'
+						 d='M1.500,0.500 L7.500,4.500 L13.500,0.500 '/>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src='js/main.js'></script>
+	<script src='js/layout.js'></script>
+</body>

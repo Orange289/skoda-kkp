@@ -36,58 +36,17 @@
 		</div>
 		<nav class='page-header__nav'>
 			<ul id='js_header-nav'>
-				<li class='page-header__link page-header__link--active'><a>Заявки</a></li>
-				<li class='page-header__link'><a href='parts.html'>Запчасти</a></li>
-				<li class='page-header__link'><a href='discounts.html'>Скидки</a></li>
-				<li class='page-header__link'><a href='pricing.html'>Наценка</a></li>
-				<li class='page-header__link'><a href='hours.html'>Стоимость н/ч</a></li>
-				<li class='page-header__link'><a href='supplements.html'>Расходники</a></li>
-				<li class='page-header__link'><a href='#'>Демо-калькулятор</a></li>
+				<li class='page-header__link page-header__link--imp page-header__link--active'><a>Заявки</a></li>
+				<li class='page-header__link page-header__link--imp'><a href='dealers.html'>Дилеры</a></li>
+				<li class='page-header__link page-header__link--imp'><a href='logs.html'>История</a></li>
 			</ul>
 		</nav>
 		<div class='page-header__user'>
-			<a class='page-header__login' href='profile.html'>
+			<a class='page-header__login' href='imp-profile.html'>
 				<svg class='page-header__icon-login'>
 					<use xlink:href='img/sprite.svg#icon_profile'></use>
 				</svg>
 			</a>
-			<div class='page-header__dealer'>
-				<div class='page-header__dealer-name'>ДЦ Геленджик Авто</div>
-				<svg class='icon'
-				 xmlns='http://www.w3.org/2000/svg'
-				 xmlns:xlink='http://www.w3.org/1999/xlink'
-				 width='15.5px' height='7.5px'>
-				<path fill-rule='evenodd'  stroke='rgb(92, 175, 50)' stroke-width='1px' stroke-linecap='butt' stroke-linejoin='miter' fill='none'
-				 d='M1.500,0.500 L7.500,4.500 L13.500,0.500 '/>
-				</svg>
-				<ul class='page-header__dealer-list'>
-					<li class='page-header__dealer-item'>ДЦ Геленджик Авто</li>
-					<li class='page-header__dealer-item'>ООО Алем Авто ЛТД</li>
-					<li class='page-header__dealer-item'>Европа Авто</li>
-				</ul>
-			</div>
-		</div>
-		<button class='hamburger hamburger--squeeze js_toggle_submenu' type='button' data-toggleTarget='js_site_nav' id='js_hamburger'>
-			<span class='hamburger__dot'></span>
-			<span class='hamburger__dot'></span>
-			<span class='hamburger__dot'></span>
-		</button>
-		<div class='page-header__submenu js_header_submenu js_site_nav'>
-			<div class='page-header__submenu-wrapper'>
-				<div class='submenu'>
-					<nav class='page-header__nav'>
-						<ul id='js_header-nav-sub'>
-							<li class='page-header__link page-header__link--active'><a>Заявки</a></li>
-							<li class='page-header__link'><a href='parts.html'>Запчасти</a></li>
-							<li class='page-header__link'><a href='discounts.html'>Скидки</a></li>
-							<li class='page-header__link'><a href='pricing.html'>Наценка</a></li>
-							<li class='page-header__link'><a href='hours.html'>Стоимость н/ч</a></li>
-							<li class='page-header__link'><a href='supplements.html'>Расходники</a></li>
-							<li class='page-header__link'><a href='#'>Демо-калькулятор</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
 		</div>
 	</header>
 	<main class='page-main requests admin'>
@@ -98,12 +57,66 @@
 					<li><a href='#'>Заявки</a></li>
 				</ul>
 			</div>
-			<div class='admin__head requests__head'>
+			<div class='admin__head requests__head requests__head--imp'>
 				<h1 class='admin__title requests__title'>Список заявок</h1>
-				<button class='btn btn--white btn--info'>Получатели</button>
 				<a class='admin__export' href='#'>Экспорт списка в XLS</a>
 			</div>
-			<div class='admin__filters filters'>
+			<div class='admin__search requests__search'>
+				<input class='form__input filters__input--requests' type='search' placeholder='Введите номер заявки или фамилию'>
+				<button class='btn btn--search btn--green'>Найти</button>
+			</div>
+			<div class='admin__filters admin__filters--imp filters'>
+				<div class='form__select form__select--imp form__select--middle select_wrap'>
+					<select class='js_chosen_select' name='models'>
+						<option value=''>Регион</option>
+						<option value=''>Регион</option>
+						<option value=''>Регион</option>
+						<option value=''>Регион</option>
+						<option value=''>Регион</option>
+						<option value=''>Регион</option>
+					</select>
+					<svg class='icon'
+					 xmlns='http://www.w3.org/2000/svg'
+					 xmlns:xlink='http://www.w3.org/1999/xlink'
+					 width='17.5px' height='8.5px'>
+					 <path fill-rule='evenodd'  stroke='rgb(92, 175, 50)' stroke-width='1px' stroke-linecap='butt' stroke-linejoin='miter' fill='none'
+					 d='M1.500,0.500 L8.500,5.500 L15.500,0.500 '/>
+					</svg>
+				</div>
+				<div class='form__select form__select--imp form__select--middle select_wrap'>
+					<select class='js_chosen_select' name='models'>
+						<option value=''>Город</option>
+						<option value=''>Город</option>
+						<option value=''>Город</option>
+						<option value=''>Город</option>
+						<option value=''>Город</option>
+						<option value=''>Город</option>
+					</select>
+					<svg class='icon'
+					 xmlns='http://www.w3.org/2000/svg'
+					 xmlns:xlink='http://www.w3.org/1999/xlink'
+					 width='17.5px' height='8.5px'>
+					 <path fill-rule='evenodd'  stroke='rgb(92, 175, 50)' stroke-width='1px' stroke-linecap='butt' stroke-linejoin='miter' fill='none'
+					 d='M1.500,0.500 L8.500,5.500 L15.500,0.500 '/>
+					</svg>
+				</div>
+				<div class='form__select form__select--imp form__select--middle select_wrap'>
+					<select class='js_chosen_select' name='models'>
+						<option value=''>Дилер</option>
+						<option value=''>Дилер</option>
+						<option value=''>Дилер</option>
+						<option value=''>Дилер</option>
+						<option value=''>Дилер</option>
+						<option value=''>Дилер</option>
+					</select>
+					<svg class='icon'
+					 xmlns='http://www.w3.org/2000/svg'
+					 xmlns:xlink='http://www.w3.org/1999/xlink'
+					 width='17.5px' height='8.5px'>
+					 <path fill-rule='evenodd'  stroke='rgb(92, 175, 50)' stroke-width='1px' stroke-linecap='butt' stroke-linejoin='miter' fill='none'
+					 d='M1.500,0.500 L8.500,5.500 L15.500,0.500 '/>
+					</svg>
+				</div>
 				<div class='form__select form__select--middle select_wrap'>
 					<select class='js_chosen_select' name='models'>
 						<option value=''>Модель</option>
@@ -137,37 +150,32 @@
 						</svg>
 					</div>
 				</div>
-				<button class='btn btn--search btn--green'>Найти</button>
-				<input class='form__input filters__input filters__input--admin filters__input--requests' type='search' placeholder='Введите номер заявки или фамилию'>
 			</div>
 			<div class='admin__table requests__table'>
 				<table class='admin__table-head requests__table-head'>
 					<tr>
 						<td class='requests__col requests__col--1'>№ заявки</td>
+						<td class='requests__col requests__col--6'>Дилер</td>
 						<td class='requests__col requests__col--2'>Фамилия и имя</td>
 						<td class='requests__col requests__col--3'>Модель</td>
 						<td class='requests__col requests__col--4'>Дата / Время</td>
 						<td class='requests__col requests__col--5'>Сумма</td>
 					</tr>
 				</table>
-				<!-- вариант содержимого таблицы empty -->
-				<div class='requests__table-content requests__table-content--empty'>
-					Список заявок пуст. Проведите <a href='#'>первоначальную настройку</a>
-				</div>
-				<!-- вариант содержимого таблицы full -->
-				<div class='admin__table-content requests__table-content requests__table-content--full'>
+				<div class='admin__table-content requests__table-content'>
 					<table>
 						<tr>
 							<td class='requests__col requests__col--1'>00233</td>
+							<td class='requests__col requests__col--6'>Геленджик Авто</td>
 							<td class='requests__col requests__col--2'>Андропов Николай</td>
 							<td class='requests__col requests__col--3'>Octavia A5 RS </td>
 							<td class='requests__col requests__col--4'>05.12.2016 / 12:00</td>
 							<td class='requests__col requests__col--5'>34 546 Р</td>
 						</tr>
-						<tr><td>00233</td><td>Андропов Николай</td><td>Octavia A5 RS </td><td>05.12.2016</td><td>34 546 Р</td></tr>
-						<tr><td>00233</td><td>Андропов Николай</td><td>Octavia A5 RS </td><td>05.12.2016</td><td>34 546 Р</td></tr>
-						<tr><td>00233</td><td>Андропов Николай</td><td>Octavia A5 RS </td><td>05.12.2016</td><td>34 546 Р</td></tr>
-						<tr><td>00233</td><td>Андропов Николай</td><td>Octavia A5 RS </td><td>05.12.2016</td><td>34 546 Р</td></tr>
+						<tr><td>00233</td><td>Геленджик Авто</td><td>Андропов Николай</td><td>Octavia A5 RS </td><td>05.12.2016 / 12:00</td><td>34 546 Р</td></tr>
+						<tr><td>00233</td><td>Геленджик Авто</td><td>Андропов Николай</td><td>Octavia A5 RS </td><td>05.12.2016 / 12:00</td><td>34 546 Р</td></tr>
+						<tr><td>00233</td><td>Геленджик Авто</td><td>Андропов Николай</td><td>Octavia A5 RS </td><td>05.12.2016 / 12:00</td><td>34 546 Р</td></tr>
+						<tr><td>00233</td><td>Геленджик Авто</td><td>Андропов Николай</td><td>Octavia A5 RS </td><td>05.12.2016 / 12:00</td><td>34 546 Р</td></tr>
 					</table>
 				</div>
 			</div>

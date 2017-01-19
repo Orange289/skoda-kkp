@@ -1,0 +1,66 @@
+.logs__head {
+	border-bottom: none;
+	padding-bottom: 40px;
+}
+
+.logs__filters {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #dddddd;
+}
+
+.logs__content {
+	margin-top: 40px;
+}
+
+.logs__col {
+
+	&--1 {
+		width: 240px;
+	}
+
+	&--2,
+	&--9,
+	&--10,
+	&--11 {
+		width: 200px;
+	}
+
+	&--3 {
+		width: 160px;
+	}
+
+	&--4 {
+		width: 136px;
+	}
+
+	&--5,
+	&--13 {
+		width: 138px;
+	}
+
+	&--6 {
+		width: 183px;
+	}
+
+	&--7 {
+		width: 73px;
+	}
+
+	&--8 {
+		width: 38px;
+	}
+
+	&--12 {
+		width: 258px;
+	}
+
+	&--14 {
+		width: 98px;
+	}
+
+	&--15 {
+		width: 80px;
+	}
+
+}

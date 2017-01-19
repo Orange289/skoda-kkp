@@ -1,0 +1,63 @@
+.dealer__head {
+	margin-bottom: 20px;
+}
+
+.dealer__info-item {
+	display: inline-block;
+	vertical-align: top;
+	padding-bottom: 48px;
+
+	b {
+		@include font-param(14px, 16px, 400, #939393);
+		display: block;
+		padding-bottom: 9px;
+	}
+
+	width: 300px;
+
+	&--postcode,
+	&--address {
+		width: 260px;
+	}
+
+}
+
+.dealer__content {
+
+	&--info {
+		margin-top: 56px;
+	}
+
+	&--users,
+	&--recipients {
+		margin-top: 54px;
+	}
+
+}
+
+.dealer__value {
+	@include font-param(16px, 16px, 400);
+
+	a {
+		color: #4ba82e;
+	}
+
+}
+
+.dealer__col {
+
+	&--1,
+	&--2,
+	&--3 {
+		width: 300px;
+	}
+
+	&--5 {
+		width: 400px;
+	}
+
+	&--6 {
+		width: 397px;
+	}
+
+}

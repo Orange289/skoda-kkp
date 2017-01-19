@@ -3,8 +3,6 @@
 	@include clearfix();
 	border-bottom: 1px solid #dddddd;
 	min-height: 69px;
-	// width: 100%;
-	// min-width: 940px;
 
 	ul {
 		list-style: none;
@@ -93,6 +91,15 @@
 			border-bottom: 1px solid #ffffff;
 			border-left: 1px solid #ffffff;
 			transform: rotate(-45deg);
+		}
+
+	}
+
+	&--imp:last-of-type {
+
+		&::before,
+		&::after {
+			display: none;
 		}
 
 	}

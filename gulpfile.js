@@ -46,7 +46,7 @@ var path = {
 		sass: 'src/css/**/*.scss',
 		sassEntry: 'src/css/base.scss',
 		libs: 'src/css/libs/*.css',
-		img: 'src/img/**/*.{png,jpeg.gif}',
+		img: 'src/img/**/*.*',
 		svg: 'src/img/icons/*.svg',
 		fonts: 'src/fonts/**/*.*'
 	},

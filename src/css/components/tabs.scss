@@ -19,6 +19,8 @@
 }
 
 #tab-first:checked ~ #tab-content-1,
-#tab-second:checked ~ #tab-content-2{
+#tab-second:checked ~ #tab-content-2,
+#tab-third:checked ~ #tab-content-3,
+#tab-forth:checked ~ #tab-content-4{
 	display: block;
 }

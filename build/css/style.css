@@ -3116,12 +3116,13 @@ select {
     content: '';
     display: table;
     clear: both; }
-  .admin__head a {
-    font-size: 14px;
-    line-height: 41px;
-    font-weight: 400;
-    color: #4ba82e;
-    float: right; }
+
+.admin__export {
+  font-size: 14px;
+  line-height: 41px;
+  font-weight: 400;
+  color: #4ba82e;
+  float: right; }
 
 .admin__pagination {
   float: left;
@@ -3140,6 +3141,8 @@ select {
 
 .admin__filters {
   padding-bottom: 28px; }
+  .admin__filters--imp {
+    padding-bottom: 35px; }
 
 .admin__title {
   font-size: 28px;
@@ -3223,6 +3226,9 @@ select {
   .admin__icon--basket {
     width: 15px;
     height: 16px; }
+
+.admin__search {
+  padding-bottom: 20px; }
 
 .auto-box {
   position: relative;
@@ -3436,6 +3442,10 @@ select {
     line-height: 16px;
     padding: 16px 42px;
     margin-right: 6px; }
+  .btn--mode {
+    float: right;
+    padding-left: 20px;
+    padding-right: 20px; }
 
 .btn__ico-location {
   display: inline-block;
@@ -3619,6 +3629,40 @@ select {
 .calculation__act + .calculation__act {
   margin-left: 20px; }
 
+.charts__item {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 21px; }
+  .charts__item:last-of-type {
+    margin-right: 0; }
+
+.charts__title {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #000000;
+  padding-bottom: 26px; }
+
+.charts__chart circle {
+  cursor: pointer;
+  fill: #ffffff;
+  stroke-width: 3px; }
+
+.charts__chart svg {
+  border-radius: 3px; }
+
+.charts__chart--1 {
+  width: 580px;
+  height: 400px; }
+
+.charts__tooltip {
+  display: block;
+  border: none;
+  border-color: transparent;
+  box-shadow: none;
+  outline: none;
+  background: red; }
+
 .client-form {
   background: #e8f4e4;
   color: #000;
@@ -3786,6 +3830,8 @@ select {
     width: 103px;
     margin-left: 7px;
     margin-right: 7px; }
+  .filters__input--period-stats {
+    margin-right: 0; }
   .filters__input--admin {
     float: right;
     padding-left: 14px; }
@@ -3888,6 +3934,8 @@ select {
     margin-left: 4px !important; }
     .form__select--small .icon {
       top: 15px; }
+  .form__select--imp {
+    margin-right: 18px; }
 
 .form__datepicker {
   position: relative;
@@ -3944,6 +3992,9 @@ select {
   text-align: justify;
   -webkit-transition: background-color .3s ease;
   transition: background-color .3s ease; }
+
+.howmuch--dealer {
+  display: none; }
 
 .map-popup {
   overflow: hidden; }
@@ -4029,6 +4080,9 @@ select {
     border-left: 1px solid #ffffff;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg); }
+
+.page-header__link--imp:last-of-type::before, .page-header__link--imp:last-of-type::after {
+  display: none; }
 
 .page-header__user {
   float: right;
@@ -4177,6 +4231,9 @@ select {
     background-color: #dddddd;
     border-radius: 50%; }
 
+.pagination--dealer {
+  display: none; }
+
 .question-ico {
   position: absolute;
   top: 8px;
@@ -4224,7 +4281,9 @@ select {
   border-color: #2b2b2b; }
 
 #tab-first:checked ~ #tab-content-1,
-#tab-second:checked ~ #tab-content-2 {
+#tab-second:checked ~ #tab-content-2,
+#tab-third:checked ~ #tab-content-3,
+#tab-forth:checked ~ #tab-content-4 {
   display: block; }
 
 .calc {
@@ -4292,6 +4351,54 @@ select {
   width: 348px;
   float: right; }
 
+.dealer__head {
+  margin-bottom: 20px; }
+
+.dealer__info-item {
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 48px;
+  width: 300px; }
+  .dealer__info-item b {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #939393;
+    display: block;
+    padding-bottom: 9px; }
+  .dealer__info-item--postcode, .dealer__info-item--address {
+    width: 260px; }
+
+.dealer__content--info {
+  margin-top: 56px; }
+
+.dealer__content--users, .dealer__content--recipients {
+  margin-top: 54px; }
+
+.dealer__value {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #000000; }
+  .dealer__value a {
+    color: #4ba82e; }
+
+.dealer__col--1, .dealer__col--2, .dealer__col--3 {
+  width: 300px; }
+
+.dealer__col--5 {
+  width: 400px; }
+
+.dealer__col--6 {
+  width: 397px; }
+
+.dealers__head {
+  border-bottom: none;
+  padding-bottom: 23px; }
+
+.dealers__col--1, .dealers__col--2, .dealers__col--3 {
+  width: 298px; }
+
 .discounts__head {
   margin-bottom: 21px; }
 
@@ -4335,6 +4442,51 @@ select {
 .hours__icon--edit {
   top: 11px;
   left: 260px; }
+
+.logs__head {
+  border-bottom: none;
+  padding-bottom: 40px; }
+
+.logs__filters {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #dddddd; }
+
+.logs__content {
+  margin-top: 40px; }
+
+.logs__col--1 {
+  width: 240px; }
+
+.logs__col--2, .logs__col--9, .logs__col--10, .logs__col--11 {
+  width: 200px; }
+
+.logs__col--3 {
+  width: 160px; }
+
+.logs__col--4 {
+  width: 136px; }
+
+.logs__col--5, .logs__col--13 {
+  width: 138px; }
+
+.logs__col--6 {
+  width: 183px; }
+
+.logs__col--7 {
+  width: 73px; }
+
+.logs__col--8 {
+  width: 38px; }
+
+.logs__col--12 {
+  width: 258px; }
+
+.logs__col--14 {
+  width: 98px; }
+
+.logs__col--15 {
+  width: 80px; }
 
 .models {
   padding-top: 6px; }
@@ -4628,25 +4780,27 @@ select {
   margin-bottom: 10px; }
 
 .profile__job {
-  margin-bottom: 30px; }
+  margin-bottom: 26px; }
 
 .requests__head {
   margin-bottom: 27px; }
+  .requests__head--imp {
+    margin-bottom: 24px; }
 
 .requests__col--1 {
-  width: 200px; }
+  width: 136px; }
 
 .requests__col--2 {
-  width: 300px; }
+  width: 235px; }
 
 .requests__col--3 {
-  width: 300px; }
+  width: 217px; }
 
 .requests__col--4 {
-  width: 200px; }
+  width: 196px; }
 
-.requests__col--5 {
-  width: 175px; }
+.requests__col--6 {
+  width: 195px; }
 
 .requests__table-content--empty {
   font-size: 18px;
@@ -4659,6 +4813,38 @@ select {
   .requests__table-content--empty a {
     color: #4ba82e;
     border-bottom: 1px solid #4ba82e; }
+
+.requests__search {
+  position: relative; }
+  .requests__search::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .requests__search input {
+    padding-left: 16px;
+    float: left;
+    width: 1053px; }
+
+.stats {
+  padding-top: 42px; }
+
+.stats__head {
+  padding-bottom: 20px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid #dddddd; }
+
+.stats__title {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 138px; }
+
+.stats__filters {
+  display: inline-block;
+  vertical-align: top; }
+
+.stats__charts {
+  padding-bottom: 36px;
+  border-bottom: 1px solid #dddddd; }
 
 .supplements__head {
   margin-bottom: 30px; }

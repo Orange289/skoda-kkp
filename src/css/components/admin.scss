@@ -16,11 +16,11 @@
 	padding-bottom: 16px;
 	border-bottom: 1px solid #dddddd;
 
-	a {
-		@include font-param(14px, 41px, 400, #4ba82e);
-		float: right;
-	}
+}
 
+.admin__export {
+	@include font-param(14px, 41px, 400, #4ba82e);
+	float: right;
 }
 
 .admin__pagination {
@@ -42,6 +42,11 @@
 
 .admin__filters {
 	padding-bottom: 28px;
+
+	&--imp {
+		padding-bottom: 35px;
+	}
+
 }
 
 .admin__title {
@@ -149,4 +154,8 @@
 		@include size(15px, 16px);
 	}
 
+}
+
+.admin__search {
+	padding-bottom: 20px;
 }

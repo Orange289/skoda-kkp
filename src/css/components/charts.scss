@@ -1,0 +1,43 @@
+.charts__item {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 21px;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+}
+
+.charts__title {
+	@include font-param(22px, 32px, 500);
+	padding-bottom: 26px;
+}
+
+.charts__chart {
+
+	circle {
+		cursor: pointer;
+		fill: #ffffff;
+		stroke-width: 3px;
+	}
+
+	svg {
+		border-radius: 3px;
+	}
+
+	&--1 {
+		@include size(580px, 400px);
+	}
+
+}
+
+.charts__tooltip {
+	display: block;
+	border: none;
+	border-color: transparent;
+	box-shadow: none;
+	outline: none;
+	background: red;
+
+}

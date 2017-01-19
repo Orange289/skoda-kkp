@@ -1,27 +1,32 @@
 .requests__head {
 	margin-bottom: 27px;
+
+	&--imp {
+		margin-bottom: 24px;
+	}
+
 }
 
 .requests__col {
 
 		&--1 {
-			width: 200px;
+			width: 136px;
 		}
 
 		&--2 {
-			width: 300px;
+			width: 235px;
 		}
 
 		&--3 {
-			width: 300px;
+			width: 217px;
 		}
 
 		&--4 {
-			width: 200px;
+			width: 196px;
 		}
 
-		&--5 {
-			width: 175px;
+		&--6 {
+			width: 195px;
 		}
 
 }
@@ -44,6 +49,18 @@
 			border-bottom: 1px solid #4ba82e;
 		}
 
+	}
+
+}
+
+.requests__search {
+	@include clearfix();
+	position: relative;
+
+	input {
+		padding-left: 16px;
+		float: left;
+		width: 1053px;
 	}
 
 }

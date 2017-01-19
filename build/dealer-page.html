@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class='no-js' lang='ru'>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Skoda</title>
+	<meta name='description' content=''>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/>
+	<link rel='icon' href='/favicon.png' type='image/png'/>
+	<link rel='apple-touch-icon-precomposed' href='/apple-touch-icon-precomposed.png'/>
+
+	<link rel='stylesheet' href='css/style.css'>
+
+	<script src='js/svg4everybody.min.js'></script>
+
+	<script src='js/jquery-1.11.1.min.js'></script>
+
+	<script src='js/jquery-ui.min.js'></script>
+
+	<script src='js/modernizr-2.8.3-respond-1.1.0.min.js'></script>
+
+	<script src='js/jquery.easing-1.3.js'></script>
+
+	<script src='js/jquery.mousewheel.min.js'></script>
+
+	<script src='js/chosen.jquery.js'></script>
+
+	<script src='js/libs.js'></script>
+
+</head>
+<body>
+	<header class='page-header'>
+		<div class='page-header__logo'>
+			<img src='img/img-logo.png' width='137' height='30' alt='logo'>
+		</div>
+		<nav class='page-header__nav'>
+			<ul id='js_header-nav'>
+				<li class='page-header__link page-header__link--imp'><a href='imp-dealer.html'>Заявки</a></li>
+				<li class='page-header__link page-header__link--imp page-header__link--active'><a>Дилеры</a></li>
+				<li class='page-header__link page-header__link--imp'><a href='logs.html'>История</a></li>
+			</ul>
+		</nav>
+		<div class='page-header__user'>
+			<a class='page-header__login' href='imp-profile.html'>
+				<svg class='page-header__icon-login'>
+					<use xlink:href='img/sprite.svg#icon_profile'></use>
+				</svg>
+			</a>
+		</div>
+	</header>
+	<main class='page-main dealer admin'>
+		<div class='page-main__wrapper admin__wrapper'>
+			<div class='breadcrumbs'>
+				<ul>
+					<li><a href='#'>Главная</a></li>
+					<li><a href='#'>Дилеры</a></li>
+					<li><a href='#'>Геленджик Авто</a></li>
+				</ul>
+			</div>
+			<div class='admin__head dealer__head'>
+				<h1 class='admin__title dealer__title'>Геленджик Авто</h1>
+				<button class='btn btn--white btn--mode'>Перейти в режим дилера</button>
+			</div>
+			<div class='dealer__tabs tabs'>
+				<input type='radio' class='form__radio tab dealer__tab' name='dealer' id='tab-first' checked>
+				<label for='tab-first' class='tabs__option'>Общая информация</label>
+				<input type='radio' class='form__radio tab' id='tab-second' name='dealer'>
+				<label for='tab-second' class='tabs__option'>Пользователи</label>
+				<input type='radio' class='form__radio tab' id='tab-third' name='dealer'>
+				<label for='tab-third' class='tabs__option'>Получатели</label>
+				<input type='radio' class='form__radio tab dealer__tab' id='tab-forth' name='dealer'>
+				<label for='tab-forth' class='tabs__option'>Калькулятор</label>
+				<div class='dealer__content dealer__content--info tabs__content' id='tab-content-1'>
+					<div class='dealer__info-item dealer__info-item--name'>
+						<b>Торговое наименование</b>
+						<span class='dealer__value'>ООО Алем Авто ЛТД</span>
+					</div>
+					<div class='dealer__info-item dealer__info-item--code'>
+						<b>Номер дилера</b>
+						<span class='dealer__value'>90220</span>
+					</div>
+					<div class='dealer__info-item dealer__info-item--city'>
+						<b>Город</b>
+						<span class='dealer__value'>Геленджик</span>
+					</div>
+					<div class='dealer__info-item dealer__info-item--postcode'>
+						<b>Индекс</b>
+						<span class='dealer__value'>030020</span>
+					</div>
+					<div class='dealer__info-item dealer__info-item--site'>
+						<b>Сайт</b>
+						<span class='dealer__value'><a href='http://alem-auto.ru' target='_blank'>http://alem-auto.ru</a></span>
+					</div>
+					<div class='dealer__info-item dealer__info-item--phone'>
+						<b>Телефон</b>
+						<span class='dealer__value'>+7 900 5000 000</span>
+					</div>
+					<div class='dealer__info-item dealer__info-item--email'>
+						<b>E-mail</b>
+						<span class='dealer__value'>dealer@alem-auto.ru</span>
+					</div>
+					<div class='dealer__info-item dealer__info-item--address'>
+						<b>Адрес</b>
+						<span class='dealer__value'>Константинопольская 8, корпус 8</span>
+					</div>
+				</div>
+				<div class='dealer__content dealer__content--recipients tabs__content' id='tab-content-2'>
+					<div class='admin__table dealer__table'>
+						<table class='admin__table-head dealer__table-head'>
+							<tr>
+								<td class='dealer__col dealer__col--1'>Фамилия и имя</td>
+								<td class='dealer__col dealer__col--2'>Должность</td>
+								<td class='dealer__col dealer__col--3'>E-mail</td>
+								<td class='dealer__col dealer__col--4'>Последняя активность</td>
+							</tr>
+						</table>
+						<div class='admin__table-content dealer__table-content'>
+							<table>
+								<tr>
+									<td class='dealer__col dealer__col--1'>Константинопольский Константин</td>
+									<td class='dealer__col dealer__col--2'>Менеджер по закупкам</td>
+									<td class='dealer__col dealer__col--3'>kk@alem-auto.ru</td>
+									<td class='dealer__col dealer__col--4'>05.12.2016 / 12:00</td>
+								</tr>
+								<tr><td>Андропов Николай</td><td>Логист</td><td>an@alem-auto.ru</td><td>05.12.2016 / 12:00</td></tr>
+								<tr><td>Щербаков Иван</td><td>Менеджер по дилерскому маркетингу</td><td>shi@alem-auto.ru</td><td>05.12.2016 / 12:00</td></tr>
+								<tr><td>Пашковская Елена</td><td>Менеджер по закупкам</td><td>pe@alem-auto.ru</td><td>05.12.2016 / 12:00</td></tr>
+								<tr><td>Нилов Антон</td><td>Руководитель отдела продаж</td><td>na@alem-auto.ru</td><td>05.12.2016 / 12:00</td></tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class='dealer__content dealer__content--calc tabs__content' id='tab-content-3'>
+					<div class='admin__table dealer__table'>
+						<table class='admin__table-head dealer__table-head'>
+							<tr>
+								<td class='dealer__col dealer__col--5'>Фамилия и имя</td>
+								<td class='dealer__col dealer__col--6'>Должность</td>
+								<td class='dealer__col dealer__col--7'>E-mail</td>
+							</tr>
+						</table>
+						<div class='admin__table-content dealer__table-content dealer__table-content--full'>
+							<table>
+								<tr>
+									<td class='dealer__col dealer__col--5'>Константинопольский Константин</td>
+									<td class='dealer__col dealer__col--6'>Менеджер по закупкам</td>
+									<td class='dealer__col dealer__col--7'>kk@alem-auto.ru</td>
+								</tr>
+								<tr><td>Андропов Николай</td><td>Логист</td><td>an@alem-auto.ru</td></tr>
+								<tr><td>Щербаков Иван</td><td>Менеджер по дилерскому маркетингу</td><td>shi@alem-auto.ru</td></tr>
+								<tr><td>Пашковская Елена</td><td>Менеджер по закупкам</td><td>pe@alem-auto.ru</td></tr>
+								<tr><td>Нилов Антон</td><td>Руководитель отдела продаж</td><td>na@alem-auto.ru</td></tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class='dealer__content dealer__content--calc tabs__content' id='tab-content-4'>
+				</div>
+			</div>
+			<div class='admin__pagination pagination pagination--dealer'>
+				<a class='pagination__item pagination__item--active' href='#' id='page_1'>1</a>
+				<a class='pagination__item' href='#' id='page_2'>2</a>
+				<a class='pagination__item' href='#' id='page_3'>3</a>
+			</div>
+			<div class='admin__howmuch howmuch howmuch--dealer'>
+				<span>Элементов на странице</span>
+				<div class='form__select form__select--small select_wrap'>
+					<select class='js_chosen_select' name='howmuch'>
+						<option value='5'>5</option>
+						<option value='10'>10</option>
+						<option value='20'>20</option>
+						<option value='30'>30</option>
+					</select>
+					<svg class='icon'
+						 xmlns='http://www.w3.org/2000/svg'
+						 xmlns:xlink='http://www.w3.org/1999/xlink'
+						 width='15.5px' height='7.5px'>
+						<path fill-rule='evenodd'  stroke='rgb(92, 175, 50)' stroke-width='1px' stroke-linecap='butt' stroke-linejoin='miter' fill='none'
+						 d='M1.500,0.500 L7.500,4.500 L13.500,0.500 '/>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src='js/main.js'></script>
+	<script src='js/layout.js'></script>
+</body>
