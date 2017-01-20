@@ -1,9 +1,12 @@
 .charts__item {
 	display: inline-block;
 	vertical-align: top;
-	margin-right: 21px;
+	margin-right: 14px;
+	margin-bottom: 24px;
+	position: relative;
+	width: 580px;
 
-	&:last-of-type {
+	&:nth-child(2) {
 		margin-right: 0;
 	}
 
@@ -11,7 +14,9 @@
 
 .charts__title {
 	@include font-param(22px, 32px, 500);
-	padding-bottom: 26px;
+	padding: 0;
+	margin: 0;
+	padding-bottom: 19px;
 }
 
 .charts__chart {
@@ -20,24 +25,82 @@
 		cursor: pointer;
 		fill: #ffffff;
 		stroke-width: 3px;
+		position: relative;
 	}
 
 	svg {
 		border-radius: 3px;
 	}
 
-	&--1 {
-		@include size(580px, 400px);
-	}
+	@include size(580px, 400px);
 
 }
 
 .charts__tooltip {
-	display: block;
-	border: none;
-	border-color: transparent;
-	box-shadow: none;
-	outline: none;
-	background: red;
+	padding: 0;
+	@include font-param(14px, 32px, 400, #2b2b2b);
+	position: absolute;
+	top: -14px;
+	left: -38px;
+}
+
+.charts__legend-item {
+	display: inline-block;
+	vertical-align: top;
+	@include font-param(14px, 32px, 400, #333333);
+	margin-right: 28px;
+	padding-left: 28px;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 7px;
+		left: 0;
+		@include size(16px);
+		border-radius: 50%;
+	}
+
+	&--normal::before {
+		background-color: #78d6fa;
+	}
+
+	&--deviation::before {
+		background-color: #ee9970;
+	}
+
+}
+
+.charts__scale {
+	@include font-param(14px, 32px, 400, #cdcdcd);
+	position: absolute;
+
+	&--v {
+		top: 75px;
+		left: 9px;
+
+		span {
+			display: block;
+			padding-bottom: 18px;
+		}
+
+	}
+
+	&--h {
+		top: 420px;
+		left: 78px;
+
+		span {
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 135px;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+		}
+
+	}
 
 }
