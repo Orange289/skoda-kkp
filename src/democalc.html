@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html class='no-js' lang='ru'>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Skoda</title>
+	<meta name='description' content=''>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/>
+	<link rel='icon' href='/favicon.png' type='image/png'/>
+	<link rel='apple-touch-icon-precomposed' href='/apple-touch-icon-precomposed.png'/>
+
+	<link rel='stylesheet' href='css/style.css'>
+
+	<script src='js/svg4everybody.min.js'></script>
+
+	<script src='js/jquery-1.11.1.min.js'></script>
+
+	<script src='js/jquery-ui.min.js'></script>
+
+	<script src='js/modernizr-2.8.3-respond-1.1.0.min.js'></script>
+
+	<script src='js/jquery.easing-1.3.js'></script>
+
+	<script src='js/jquery.mousewheel.min.js'></script>
+
+	<script src='js/chosen.jquery.js'></script>
+
+	<script src='js/libs.js'></script>
+
+	<!-- FANCYBOX -->
+	<script src='js/jquery.fancybox.pack.js?v=2.1.5'></script>
+	<script src='js/config_fancybox.js'></script>
+
+</head>
+<body>
+
+	<!-- FANCYBOX POPUP CONTENT -->
+	<div class='fancybox'>
+		<div id='popup_map' class='map-popup'>
+			<i class='fancybox__close'></i>
+			<div id='dealer_map' style='width: 860px; height: 730px;'></div>
+			<div style='position: absolute; top: 0; left: 0; z-index: 5;'>
+				<mark style='display: inline-block; padding: 4px; margin-bottom: 10px;'>иконка геолокации</mark>
+				<br/>
+				<span style="display: inline-block; width: 15px; height: 15px; background-image: url('img/geolocation-marker.png'); background-size: 15px auto; "></span>
+				<br/>
+				<br/>
+				<mark style='display: inline-block; padding: 4px; margin-bottom: 10px;'>иконка ближайшего центра от местоположения</mark>
+				<br/>
+				<span style="display: inline-block; width: 54px; height: 82px; background-image: url('img/map-marker-x2.png'); background-size: 54px 82px; "></span>
+			</div>
+		</div>
+	</div>
+
+	<header class='page-header'>
+		<div class='page-header__logo'>
+			<img src='img/img-logo.png' width='137' height='30' alt='logo'>
+		</div>
+		<nav class='page-header__nav'>
+			<ul id='js_header-nav'>
+				<li class='page-header__link'><a href='requests.html'>Заявки</a></li>
+				<li class='page-header__link'><a href='parts.html'>Запчасти</a></li>
+				<li class='page-header__link'><a href='discounts.html'>Скидки</a></li>
+				<li class='page-header__link'><a href='pricing.html'>Наценка</a></li>
+				<li class='page-header__link'><a href='hours.html'>Стоимость н/ч</a></li>
+				<li class='page-header__link'><a href='supplements.html'>Расходники</a></li>
+				<li class='page-header__link page-header__link--active'><a>Демо-калькулятор</a></li>
+			</ul>
+		</nav>
+		<div class='page-header__user'>
+			<a class='page-header__login' href='profile.html'>
+				<svg class='page-header__icon-login'>
+					<use xlink:href='img/sprite.svg#icon_profile'></use>
+				</svg>
+			</a>
+		</div>
+		<button class='hamburger hamburger--squeeze js_toggle_submenu' type='button' data-toggleTarget='js_site_nav' id='js_hamburger'>
+			<span class='hamburger__dot'></span>
+			<span class='hamburger__dot'></span>
+			<span class='hamburger__dot'></span>
+		</button>
+		<div class='page-header__submenu js_header_submenu js_site_nav'>
+			<div class='page-header__submenu-wrapper'>
+				<div class='submenu'>
+					<nav class='page-header__nav'>
+						<ul id='js_header-nav-sub'>
+							<li class='page-header__link'><a href='requests.html'>Заявки</a></li>
+							<li class='page-header__link'><a href='parts.html'>Запчасти</a></li>
+							<li class='page-header__link'><a href='discounts.html'>Скидки</a></li>
+							<li class='page-header__link'><a href='pricing.html'>Наценка</a></li>
+							<li class='page-header__link'><a href='hours.html'>Стоимость н/ч</a></li>
+							<li class='page-header__link'><a href='supplements.html'>Расходники</a></li>
+							<li class='page-header__link page-header__link--active'><a>Демо-калькулятор</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class='page-main democalc admin'>
+		<div class='page-main__wrapper admin__wrapper'>
+			<div class='breadcrumbs'>
+				<ul>
+					<li><a href='#'>Главная</a></li>
+					<li><a href='#'>Демо-калькулятор</a></li>
+				</ul>
+			</div>
+			<div class='democalc__iframe'>
+				<input class='form__input democalc__input' type='text' value='<iframe src="demo_iframe.htm" style="border:2px solid grey;"></iframe>'>
+				<button class='btn btn--copy btn--green'>Копировать</button>
+			</div>
+			<div class='democalc__content'>
+				<h1>Демо-калькулятор</h1>
+				<section class='democalc__calc'>
+					<div class='democalc__options'>
+						<h2>Выберите модель</h2>
+					</div>
+					<div class='democalc__cars' style='font-size: 0;'>
+						<a class='democalc__car' id='rapid' href='index.html'>
+							<div class='democalc__img'>
+								<img src='img/bodycalc_list/img-rapid.png' alt='rapid' width='259' height='151'>
+							</div>
+							<b>Rapid</b>
+						</a>
+						<a class='democalc__car' id='octavia' href='index.html'>
+							<div class='democalc__img'>
+								<img src='img/bodycalc_list/img-octavia.png' alt='octavia' width='259' height='123'>
+							</div>
+							<b>Octavia</b>
+						</a>
+						<a class='democalc__car'	id='roomster' href='index.html'>
+							<div class='democalc__img'>
+								<img src='img/bodycalc_list/img-roomster.png' alt='roomster' width='247' height='159'>
+							</div>
+							<b>Roomster</b>
+						</a>
+						<a class='democalc__car' id='fabia' href='index.html'>
+							<div class='democalc__img'>
+								<img src='img/bodycalc_list/img-fabia.png' alt='fabia' width='259' height='161'>
+							</div>
+							<b>Fabia</b>
+						</a>
+						<a class='democalc__car' id='yeti' href='index.html'>
+							<div class='democalc__img'>
+								<img src='img/bodycalc_list/img-yeti.png' alt='yeti' width='258' height='153'>
+							</div>
+							<b>Yeti</b>
+						</a>
+						<a class='democalc__car' id='superb' href='index.html'>
+							<div class='democalc__img'>
+								<img src='img/bodycalc_list/img-superb.png' alt='superb' width='232' height='139'>
+							</div>
+							<b>Superb</b>
+						</a>
+						<a class='democalc__car' id='kodiaq' href='index.html'>
+							<div class='democalc__img'>
+								<img src='img/bodycalc_list/img-kodiaq.png' alt='kodiaq' width='246' height='141'>
+							</div>
+							<b>Kodiaq</b>
+						</a>
+					</div>
+					<div class='map' id='map'>
+						<div class='map__dealers' width='830' height='600'></div>
+						<button class='btn btn--close' type='button' title='Закрыть' id='map-close'>Закрыть</button>
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+	<!-- yandex maps -->
+	<script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
+	<script src='js/config_map.js'></script>
+
+	<script src='js/main.js'></script>
+	<script src='js/layout.js'></script>
+</body>

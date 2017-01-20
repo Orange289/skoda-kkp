@@ -42,7 +42,7 @@
 				<li class='page-header__link page-header__link--active'><a>Наценка</a></li>
 				<li class='page-header__link'><a href='hours.html'>Стоимость н/ч</a></li>
 				<li class='page-header__link'><a href='supplements.html'>Расходники</a></li>
-				<li class='page-header__link'><a href='#'>Демо-калькулятор</a></li>
+				<li class='page-header__link'><a href='democalc.html'>Демо-калькулятор</a></li>
 			</ul>
 		</nav>
 		<div class='page-header__user'>
@@ -83,7 +83,7 @@
 							<li class='page-header__link page-header__link--active'><a>Наценка</a></li>
 							<li class='page-header__link'><a href='hours.html'>Стоимость н/ч</a></li>
 							<li class='page-header__link'><a href='supplements.html'>Расходники</a></li>
-							<li class='page-header__link'><a href='#'>Демо-калькулятор</a></li>
+							<li class='page-header__link'><a href='democalc.html'>Демо-калькулятор</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -106,7 +106,7 @@
 			<div class='admin__edit-block admin__edit-block--pricing'>
 				<span>Базовый коэффициент наценки</span>
 				<input class='form__input' type='text' value='1.3' disabled>
-				<svg class='admin__icon admin__icon--edit pricing__icon pricing__icon--edit icon_edit_input'>
+				<svg class='admin__icon admin__icon--edit pricing__icon pricing__icon--edit_input icon_edit_input'>
 					<use xlink:href='img/sprite.svg#icon_edit'></use>
 				</svg>
 				<button class='btn btn--green btn--edit-block'>Сохранить</button>
@@ -127,7 +127,14 @@
 							<td class='pricing__col pricing__col--1'>Категория 1</td>
 							<td class='pricing__col pricing__col--2'>-</td>
 							<td class='pricing__col pricing__col--3'>1.8</td>
-							<td class='pricing__col pricing__col--4'></td>
+							<td class='pricing__col pricing__col--4'>
+								<svg class='admin__icon admin__icon--edit pricing__icon pricing__icon--edit'>
+									<use xlink:href='img/sprite.svg#icon_edit'></use>
+								</svg>
+								<svg class='admin__icon admin__icon--basket pricing__icon pricing__icon--basket'>
+									<use xlink:href='img/sprite.svg#icon_basket'></use>
+								</svg>
+							</td>
 						</tr>
 					</table>
 					<table class='admin__add-exception '>

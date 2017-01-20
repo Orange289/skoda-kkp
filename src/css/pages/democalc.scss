@@ -1,0 +1,108 @@
+.democalc {
+
+	h1 {
+		@include font-param(36px, 32px, 800);
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: 70px;
+	}
+
+	h2 {
+		@include font-param(24px, 32px, 500);
+		text-align: center;
+		margin-top: -16px;
+		margin-bottom: 27px;
+	}
+
+
+}
+
+.democalc__iframe {
+	text-align: center;
+	margin-top: -5px;
+	margin-bottom: 50px;
+}
+
+.democalc__input {
+	width: 780px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	padding-left: 12px;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.democalc__options {
+	padding-bottom: 24px;
+}
+
+.democalc_icon-location {
+	position: absolute;
+	top: 14px;
+	left: 13px;
+}
+
+.democalc__select {
+
+	&--city {
+		width: 250px;
+		margin-left: 194px;
+		margin-right: 7px;
+		z-index: 0;
+	}
+
+	&--center {
+		width: 399px;
+	}
+
+	.chosen-single {
+		padding-top: 17px;
+		padding-bottom: 31px;
+	}
+
+	.icon {
+		top: 20px;
+	}
+
+}
+
+.democalc__cars {
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 30px;
+}
+
+.democalc__img {
+	height: 158px;
+}
+
+.democalc__car {
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 30px;
+	margin-right: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	@include size(260px, 190px);
+
+	b {
+		display: block;
+		text-align: center;
+		@include font-param(20px, 32px, 500);
+	}
+
+	&:nth-of-type(4n) {
+		margin-right: 0;
+	}
+
+	&:hover {
+		background-color: #f0f0f0;
+
+		b {
+			color: #4ba82e;
+		}
+
+	}
+
+}

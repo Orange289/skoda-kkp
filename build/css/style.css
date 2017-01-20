@@ -2706,8 +2706,8 @@ select {
   background: #ffffff;
   color: #333;
   box-shadow: none;
-  padding-top: 12px !important;
-  padding-bottom: 26px !important;
+  padding-top: 12px;
+  padding-bottom: 26px;
   padding-left: 13px;
   padding-right: 27px !important;
   margin-top: -4px !important; }
@@ -3431,6 +3431,14 @@ select {
     margin-left: 20px;
     padding-top: 5px;
     padding-bottom: 3px; }
+  .btn--copy {
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    width: 140px; }
   .btn--edit-block {
     display: none;
     padding: 12px 14px; }
@@ -3450,9 +3458,38 @@ select {
     float: right;
     padding-left: 20px;
     padding-right: 20px; }
+  .btn--location {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    position: absolute;
+    top: 59px;
+    left: 145px;
+    z-index: 1; }
+    .btn--location::before {
+      content: '';
+      position: absolute; }
+  .btn--open-map {
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: 800;
+    color: #4ba82e;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 36px; }
+    .btn--open-map::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 12px;
+      width: 18px;
+      height: 26px;
+      background: url("../img/icon-dealers.png") no-repeat; }
 
 .btn__ico-location {
-  display: inline-block;
   width: 12px;
   height: 16px;
   background: url("../img/ico_location_2.svg");
@@ -4428,7 +4465,7 @@ select {
   margin-top: 56px; }
 
 .dealer__content--users, .dealer__content--recipients {
-  margin-top: 54px; }
+  margin-top: 48px; }
 
 .dealer__value {
   font-size: 16px;
@@ -4453,6 +4490,93 @@ select {
 
 .dealers__col--1, .dealers__col--2, .dealers__col--3 {
   width: 298px; }
+
+.democalc h1 {
+  font-size: 36px;
+  line-height: 32px;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 70px; }
+
+.democalc h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  margin-top: -16px;
+  margin-bottom: 27px; }
+
+.democalc__iframe {
+  text-align: center;
+  margin-top: -5px;
+  margin-bottom: 50px; }
+
+.democalc__input {
+  width: 780px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 12px;
+  display: inline-block;
+  margin-right: 20px; }
+
+.democalc__options {
+  padding-bottom: 24px; }
+
+.democalc_icon-location {
+  position: absolute;
+  top: 14px;
+  left: 13px; }
+
+.democalc__select--city {
+  width: 250px;
+  margin-left: 194px;
+  margin-right: 7px;
+  z-index: 0; }
+
+.democalc__select--center {
+  width: 399px; }
+
+.democalc__select .chosen-single {
+  padding-top: 17px;
+  padding-bottom: 31px; }
+
+.democalc__select .icon {
+  top: 20px; }
+
+.democalc__cars {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 30px; }
+
+.democalc__img {
+  height: 158px; }
+
+.democalc__car {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 30px;
+  margin-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  width: 260px;
+  height: 190px; }
+  .democalc__car b {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+    color: #000000; }
+  .democalc__car:nth-of-type(4n) {
+    margin-right: 0; }
+  .democalc__car:hover {
+    background-color: #f0f0f0; }
+    .democalc__car:hover b {
+      color: #4ba82e; }
 
 .discounts__head {
   margin-bottom: 21px; }
@@ -4491,12 +4615,41 @@ select {
 .hours__col--3 {
   width: 338px; }
 
+.hours__col--4 {
+  position: relative; }
+
 .hours__row .form__select {
   width: 380px; }
 
-.hours__icon--edit {
+.hours__icon--edit_input {
   top: 11px;
   left: 260px; }
+
+.hours__icon--edit {
+  top: 9px;
+  left: 3px; }
+
+.hours__icon--basket {
+  left: 27px;
+  top: 9px; }
+
+.imp-requests__col--1 {
+  width: 136px; }
+
+.imp-requests__col--2 {
+  width: 195px; }
+
+.imp-requests__col--3 {
+  width: 238px; }
+
+.imp-requests__col--4 {
+  width: 218px; }
+
+.imp-requests__col--5 {
+  width: 198px; }
+
+.imp-requests__col--6 {
+  width: 178px; }
 
 .logs__head {
   border-bottom: none;
@@ -4775,12 +4928,23 @@ select {
 .pricing__col--3 {
   width: 338px; }
 
+.pricing__col--4 {
+  position: relative; }
+
 .pricing__row .form__select {
   width: 380px !important; }
 
-.pricing__icon--edit {
+.pricing__icon--edit_input {
   top: 11px;
   left: 297px; }
+
+.pricing__icon--edit {
+  top: 9px;
+  left: 3px; }
+
+.pricing__icon--basket {
+  left: 27px;
+  top: 9px; }
 
 .profile .breadcrumbs {
   padding-bottom: 20px; }
@@ -4843,19 +5007,19 @@ select {
     margin-bottom: 24px; }
 
 .requests__col--1 {
-  width: 136px; }
+  width: 200px; }
 
 .requests__col--2 {
-  width: 235px; }
+  width: 300px; }
 
 .requests__col--3 {
-  width: 217px; }
+  width: 300px; }
 
 .requests__col--4 {
-  width: 196px; }
+  width: 200px; }
 
-.requests__col--6 {
-  width: 195px; }
+.requests__col--5 {
+  width: 175px; }
 
 .requests__table-content--empty {
   font-size: 18px;
@@ -4912,12 +5076,23 @@ select {
 .supplements__col--4 {
   width: 238px; }
 
+.supplements__col--5 {
+  position: relative; }
+
 .supplements__row .form__select {
   width: 280px; }
 
 .supplements__row .form__input {
   width: 90px; }
 
-.supplements__icon--edit {
+.supplements__icon--edit_input {
   top: 11px;
   left: 266px; }
+
+.supplements__icon--edit {
+  top: 9px;
+  left: 3px; }
+
+.supplements__icon--basket {
+  left: 27px;
+  top: 9px; }

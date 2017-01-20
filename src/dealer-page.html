@@ -105,7 +105,7 @@
 						<span class='dealer__value'>Константинопольская 8, корпус 8</span>
 					</div>
 				</div>
-				<div class='dealer__content dealer__content--recipients tabs__content' id='tab-content-2'>
+				<div class='dealer__content dealer__content--users tabs__content' id='tab-content-2'>
 					<div class='admin__table dealer__table'>
 						<table class='admin__table-head dealer__table-head'>
 							<tr>
@@ -131,7 +131,7 @@
 						</div>
 					</div>
 				</div>
-				<div class='dealer__content dealer__content--calc tabs__content' id='tab-content-3'>
+				<div class='dealer__content dealer__content--recipients tabs__content' id='tab-content-3'>
 					<div class='admin__table dealer__table'>
 						<table class='admin__table-head dealer__table-head'>
 							<tr>
@@ -155,7 +155,67 @@
 						</div>
 					</div>
 				</div>
-				<div class='dealer__content dealer__content--calc tabs__content' id='tab-content-4'>
+				<div class='dealer__content dealer__content--calc tabs__content democalc' id='tab-content-4'>
+					<div class='democalc__iframe'>
+						<input class='form__input democalc__input' type='text' value='<iframe src="demo_iframe.htm" style="border:2px solid grey;"></iframe>'>
+						<button class='btn btn--copy btn--green'>Копировать</button>
+					</div>
+					<div class='democalc__content'>
+						<h1>Демо-калькулятор</h1>
+						<section class='democalc__calc'>
+							<div class='democalc__options'>
+								<h2>Выберите модель</h2>
+							</div>
+							<div class='democalc__cars' style='font-size: 0;'>
+								<a class='democalc__car' id='rapid' href='index.html'>
+									<div class='democalc__img'>
+										<img src='img/bodycalc_list/img-rapid.png' alt='rapid' width='259' height='151'>
+									</div>
+									<b>Rapid</b>
+								</a>
+								<a class='democalc__car' id='octavia' href='index.html'>
+									<div class='democalc__img'>
+										<img src='img/bodycalc_list/img-octavia.png' alt='octavia' width='259' height='123'>
+									</div>
+									<b>Octavia</b>
+								</a>
+								<a class='democalc__car'	id='roomster' href='index.html'>
+									<div class='democalc__img'>
+										<img src='img/bodycalc_list/img-roomster.png' alt='roomster' width='247' height='159'>
+									</div>
+									<b>Roomster</b>
+								</a>
+								<a class='democalc__car' id='fabia' href='index.html'>
+									<div class='democalc__img'>
+										<img src='img/bodycalc_list/img-fabia.png' alt='fabia' width='259' height='161'>
+									</div>
+									<b>Fabia</b>
+								</a>
+								<a class='democalc__car' id='yeti' href='index.html'>
+									<div class='democalc__img'>
+										<img src='img/bodycalc_list/img-yeti.png' alt='yeti' width='258' height='153'>
+									</div>
+									<b>Yeti</b>
+								</a>
+								<a class='democalc__car' id='superb' href='index.html'>
+									<div class='democalc__img'>
+										<img src='img/bodycalc_list/img-superb.png' alt='superb' width='232' height='139'>
+									</div>
+									<b>Superb</b>
+								</a>
+								<a class='democalc__car' id='kodiaq' href='index.html'>
+									<div class='democalc__img'>
+										<img src='img/bodycalc_list/img-kodiaq.png' alt='kodiaq' width='246' height='141'>
+									</div>
+									<b>Kodiaq</b>
+								</a>
+							</div>
+							<div class='map' id='map'>
+								<div class='map__dealers' width='830' height='600'></div>
+								<button class='btn btn--close' type='button' title='Закрыть' id='map-close'>Закрыть</button>
+							</div>
+						</section>
+					</div>
 				</div>
 			</div>
 			<div class='admin__pagination pagination pagination--dealer'>

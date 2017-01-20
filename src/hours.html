@@ -42,7 +42,7 @@
 				<li class='page-header__link'><a href='pricing.html'>Наценка</a></li>
 				<li class='page-header__link page-header__link--active'><a>Стоимость н/ч</a></li>
 				<li class='page-header__link'><a href='supplements.html'>Расходники</a></li>
-				<li class='page-header__link'><a href='#'>Демо-калькулятор</a></li>
+				<li class='page-header__link'><a href='democalc.html'>Демо-калькулятор</a></li>
 			</ul>
 		</nav>
 		<div class='page-header__user'>
@@ -106,7 +106,7 @@
 			<div class='admin__edit-block admin__edit-block--hours'>
 				<span>Базовая стоимость н/ч</span>
 				<input class='form__input' type='text' value='1 800 Р' disabled>
-				<svg class='admin__icon admin__icon--edit hours__icon hours__icon--edit icon_edit_input'>
+				<svg class='admin__icon admin__icon--edit hours__icon hours__icon--edit_input icon_edit_input'>
 					<use xlink:href='img/sprite.svg#icon_edit'></use>
 				</svg>
 				<button class='btn btn--green btn--edit-block'>Сохранить</button>
@@ -127,7 +127,14 @@
 							<td class='hours__col hours__col--1'>Octavia</td>
 							<td class='hours__col hours__col--2'>A5 RS</td>
 							<td class='hours__col hours__col--3'>2 200 Р</td>
-							<td class='hours__col hours__col--4'></td>
+							<td class='hours__col hours__col--4'>
+								<svg class='admin__icon admin__icon--edit hours__icon hours__icon--edit'>
+									<use xlink:href='img/sprite.svg#icon_edit'></use>
+								</svg>
+								<svg class='admin__icon admin__icon--basket hours__icon hours__icon--basket'>
+									<use xlink:href='img/sprite.svg#icon_basket'></use>
+								</svg>
+							</td>
 						</tr>
 					</table>
 					<table class='admin__add-exception'>
